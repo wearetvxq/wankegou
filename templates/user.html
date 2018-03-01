@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- saved from url=(0042)http://www.liankexiong.net/user/index.html -->
+<html class="pixel-ratio-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>青蛙dog</title>
+
+
+    <script src="{% static 'js/clipboard.min.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery-weui.min.js' %}"></script>
+<link href="{% static 'css/app.2b1339aa8b4bf34ca660f39fbcc8078b.css' %}" rel="stylesheet">
+<link href="{% static 'css/jquery-weui.min.css' %}" rel="stylesheet">
+<style type="text/css">html, * {-moz-user-select:text!important;}</style>
+	<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style>
+	</head>
+<body>
+<div id="app">
+	<!---->
+	<div data-v-31e443c4="" class="container" >
+		<div data-v-7ec67502="" data-v-31e443c4="" class="page">
+			<div data-v-7ec67502="" class="head">
+				<h1 data-v-7ec67502="">个人中心</h1>
+			</div>
+			<div data-v-7ec67502="" class="panel" id="userprofile">
+				<div data-v-7ec67502="" class="user">
+					<div data-v-7ec67502="" class="img">
+						<img data-v-7ec67502="" src="{% static 'image/avatar.png' %}" style="border-radius:0;">
+{#						<img data-v-7ec67502="" src="{{ user.svg }}" style="border-radius:0;">#}
+                    </div>
+					<div data-v-7ec67502="" class="info">
+						<div data-v-7ec67502="" class="name">
+						{{ user.nick_name }} 		</div>
+						<div data-v-7ec67502="">
+							<div data-v-7ec67502="" class="money">
+								余额 {{ user.yue }}wkc
+
+                                冻结{{ user.djyue }}wkc
+
+{#							<div data-v-7ec67502="" class="address" id="walletID">   {% ifequal user.jihuo  'True' %}{{ user.qianbao }}{% endifequal %}</div>#}
+                                <div data-v-7ec67502="" class="address" id="walletID">{{ user.qianbao }}</div>
+                                </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="weui-btn weui-btn_default" style="display:none;" data-clipboard-target="#walletID" id="copyBtn">复制</button>
+			<div data-v-7ec67502="" class="panel">
+				<div data-v-7ec67502="" class="title">
+					<h2 data-v-7ec67502="">游戏统计</h2>
+				</div>
+				<div data-v-7ec67502="" class="statistics">
+					<div data-v-7ec67502="" class="item">
+						<span data-v-7ec67502="">{{ user.count }}</span>
+						<p data-v-7ec67502="">
+							狗狗数量
+						</p>
+					</div>
+					<div data-v-7ec67502="" class="item">
+						<span data-v-7ec67502="">{{ user.jingyuan }}</span>
+						<p data-v-7ec67502="">
+							狗元数量
+						</p>
+					</div>
+					<div data-v-7ec67502="" class="item">
+						<span data-v-7ec67502="">{{ user.juejin }}</span>
+						<p data-v-7ec67502="">
+							掘金总收益
+						</p>
+					</div>
+				</div>
+			</div>
+			<!---->
+			<div data-v-7ec67502="" class="panel">
+				<div data-v-7ec67502="" class="title" style="margin-bottom:5px;">
+					<h2 data-v-7ec67502="">推广地址(获取抽奖机会) <a href="{% url 'yaoqing' %}">邀请记录</a></h2>
+				</div>
+				<input type="text" readonly="readonly" id="inviteurl" value="http://www.alisa.fun/login?id={{ user.id }}" style="width:100%;height:29px;font-size:12px;text-align:center;border:1px solid #ccc;border-radius: 5px;">
+				<button class="weui-btn weui-btn_mini weui-btn_primary" style="display:none;float:right;margin-right:5px;" data-clipboard-target="#inviteurl" id="copyBtn2">复制</button>
+			</div>
+			<div data-v-7ec67502="" class="panel" onclick="$.alert('暂无公告');">
+				<h3 data-v-7ec67502="" class="help">公告</h3>
+			</div>
+            	<div data-v-7ec67502="" class="panel" onclick="location.href='{% url 'choujiang' %}';;">
+				<h3 data-v-7ec67502="" class="help">幸运抽奖</h3>
+			</div>
+
+
+
+			<div data-v-7ec67502="" class="panel" onclick="location.href='{% url 'help' %}';;">
+				<h3 data-v-7ec67502="" class="help">帮助中心</h3>
+			</div>
+			<div data-v-7ec67502="" class="panel suggest" onclick="$.alert('官方交流群 8141423');">
+				<a data-v-7ec67502="" >联系我们</a>
+			</div>
+			<!---->
+		</div>
+						<div data-v-31e443c4="" class="weui-tabbar tab">
+			<a data-v-31e443c4="" href="{% url 'home' %}" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon">
+				<!----><img data-v-31e443c4="" src="{% static 'image/home.svg' %}" >
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">首页</span>
+			</p>
+			</a>
+			<a data-v-31e443c4="" href="{% url 'market' %}" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon">
+				<img data-v-31e443c4="" src="{% static 'image/market.svg' %}" >
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">广场</span>
+			</p>
+			</a>
+			<a data-v-31e443c4="" href="{% url 'user' %}" class="weui-tabbar__item" weui-bar__item_on="">
+			<div class="weui-tabbar__icon">
+				<img data-v-31e443c4="" src="{% static 'image/mine.svg' %}">
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">我的</span>
+			</p>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div id="half" class="weui-popup__container popup-bottom" style="z-index:9999;">
+	<div class="weui-popup__overlay">
+	</div>
+	<div class="weui-popup__modal">
+		<div class="toolbar">
+			<div class="toolbar-inner">
+				<a href="javascript:" class="picker-button close-popup">关闭</a>
+				<h1 class="title">设置安全密码</h1>
+			</div>
+		</div>
+		<div class="modal-content" style="background-color:#fbf9fe;">
+			<div data-v-7ec67502="" class="password">
+				<p data-v-7ec67502="">
+					敬告：安全密码不要与登录密码或其它网站密码一致，由此产生的账号被盗，本站概不负责。
+				</p>
+				<div data-v-7ec67502="">
+					<!---->
+					<div class="weui-cells vux-no-group-title">
+						<div data-v-7ec67502="" class="vux-x-input weui-cell">
+							<div class="weui-cell__hd">
+								<label for="vux-x-input-32pqz" class="weui-label" style="width: 7em;">输入登录密码</label>
+							</div>
+							<div class="weui-cell__bd weui-cell__primary">
+								<input id="vux-x-input-32pqz" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="password" placeholder="" class="weui-input">
+							</div>
+							<div class="weui-cell__ft">
+								<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i>
+							</div>
+						</div>
+						<div data-v-7ec67502="" class="vux-x-input weui-cell">
+							<div class="weui-cell__hd">
+								<label for="vux-x-input-fzrko" class="weui-label" style="width: 7em;">输入安全密码</label>
+							</div>
+							<div class="weui-cell__bd weui-cell__primary">
+								<input id="vux-x-input-fzrko" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="password" placeholder="" class="weui-input">
+							</div>
+							<div class="weui-cell__ft">
+								<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i>
+							</div>
+						</div>
+						<div data-v-7ec67502="" class="vux-x-input weui-cell">
+							<div class="weui-cell__hd">
+								<label for="vux-x-input-c2iuh" class="weui-label" style="width: 7em;">重复安全密码</label>
+							</div>
+							<div class="weui-cell__bd weui-cell__primary">
+								<input id="vux-x-input-c2iuh" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="password" placeholder="" class="weui-input">
+							</div>
+							<div class="weui-cell__ft">
+								<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i>
+							</div>
+						</div>
+						<div data-v-7ec67502="" class="vux-x-input weui-cell weui-vcode">
+							<div class="weui-cell__hd">
+								<label for="vux-x-input-2rzej" class="weui-label" style="width: 6em;">输入验证码</label>
+							</div>
+							<div class="weui-cell__bd weui-cell__primary">
+								<input id="vux-x-input-2rzej" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" class="weui-input">
+							</div>
+							<div class="weui-cell__ft">
+								<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><button data-v-7ec67502="" class="weui-btn weui-btn_mini weui-btn_primary" id="sendCode">发送验证码</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-v-7ec67502="" style="margin: 20px;">
+					<button data-v-7ec67502="" class="weui-btn weui-btn_primary" id="saveBtn">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+
+
+      $(document).ready(function() {
+        $.get("{% url 'check_login' %} ", function (data) {
+            if ("1" == data.code) {
+                {#$(".top-bar>.user-info>.user-name").html(data.data.name);#}
+                {#$(".top-bar>.user-info").show();#}
+                {#$(".panel").html(template("userprofile", {user:data.user}));#}
+                {#$(".area-list").html(template("area-list-tmpl", {areas:data.areas}));#}
+            } else {
+                location.href = '{% url 'login' %}';
+            }
+        }, "json");
+
+
+
+    })
+
+
+
+$(function(){
+	//$('.address').click(function(){
+		//$('#copyBtn').click();
+	//});
+
+	$('#inviteurl').click(function(){
+		$('#copyBtn2').click();
+	});
+    $.ajaxSetup({
+        data:{csrfmiddlewaretoken:'{{ csrf_token }}'},
+    });
+	$('#userprofile').click(function(){
+		$.actions({
+			//title: "选择操作",
+			onClose: function() {
+				console.log("close");
+			},
+			actions: [{
+				text: "修改昵称",
+				onClick: function() {
+					$.prompt({
+						text: "名字不能超过6个汉字或18个英文，不得出现不和谐文字",
+						title: "修改昵称",
+						onOK: function(text) {
+							$.post("{% url 'modify_nickname' %}", { "nickname": text },
+								function(data){
+									if(data.code == 1){
+										$.toast(data.msg,"text");
+										location.href = '{% url 'user' %}';
+									}
+									else{
+										window.location.reload();
+									}
+							}, "json");
+						},
+						onCancel: function() {
+							console.log("取消了");
+						},
+						input: '请输入新昵称'
+					});
+				}
+			},
+             {#   {#}
+			{#	text: "安全密码",#}
+			{#	className: "color-primary",#}
+			{#	onClick: function() {#}
+			{#		$("#half").popup();#}
+			{#	} },#}
+
+                {
+				text: "充值与绑定",
+				className: "color-primary",
+				onClick: function() {
+					$.prompt({
+						title: "请输入充值金额",
+						onOK: function(text) {
+							if(isNaN(text)){
+								$.toast('请输入正确的充值金额',"text");
+							}
+							else{
+								$.post("{% url 'recharge' %}", { "amount": text },
+									function(data){
+										if(data.code == 0){
+											$.toast(data.msg,"text");
+											location.href = '{% url 'bind' %}';
+										}
+										else{
+											$.alert("0xe32e6004f07eba3f052226bcefacecc52f095d32", "请用绑定钱包在10分钟内向下方地址转账"+text+"wkc，超时将不予确认！");
+										}
+								}, "json");
+								
+							}
+						},
+						onCancel: function() {
+							console.log("取消了");
+						},
+						input: '10'
+					});
+				}
+			}, {
+				text: "提现",
+				className: 'color-danger',
+				onClick: function() {
+					$.prompt({
+						title: "请输入提现金额",
+						onOK: function(text) {
+							if(isNaN(text)){
+								$.toast('请输入正确的提现金额',"text");
+							}
+							else{
+								$.post("{% url 'submit_withdraw' %}", { "amount": text },
+									function(data){
+										if(data.code == 0){
+											$.toast(data.msg,"text");
+										}
+										else{
+											$.alert("提现已申请，请等待打款！");
+										}
+								}, "json");
+							}
+						},
+						onCancel: function() {
+							console.log("取消了");
+						},
+						input: '10'
+					});
+				}
+			}, {
+				text: "查看提现记录",
+				onClick: function() {
+					window.location.href = '{% url "withdraw_records" %}';
+				}
+			}, {
+				text: "查看收支记录",
+				onClick: function() {
+					window.location.href = '{% url "records" %}';
+				}
+			},
+                 {
+				text: "删除绑定钱包",
+				onClick: function() {
+					window.location.href = '{% url "shanchuqianbao" %}';
+				}
+			},
+                {
+				text: "退出登录",
+				className: 'color-danger',
+				onClick: function() {
+					location.href = '{% url "logout" %}';
+				}
+			}]
+		});
+	});
+
+	$('#vux-x-input-32pqz,#vux-x-input-fzrko,#vux-x-input-2rzej').on('input',function(e){
+		var value = $(this).val();
+		if(value != ''){
+			$(this).parent().next().find('.weui-icon-clear').show();
+			if(value.length < 6){
+				$(this).parent().next().find('.weui-icon-warn').show();
+			}
+			else{
+				$(this).parent().next().find('.weui-icon-warn').hide();
+			}
+		}
+		else{
+			$(this).parent().next().find('.weui-icon-clear').hide();
+			$(this).parent().next().find('.weui-icon-warn').hide();
+		}
+	});
+
+	$('#vux-x-input-c2iuh').on('input',function(e){
+		var value = $(this).val();
+		if(value != ''){
+			$(this).parent().next().find('.weui-icon-clear').show();
+			if(value.length < 6 || value != $('#vux-x-input-fzrko').val()){
+				$(this).parent().next().find('.weui-icon-warn').show();
+			}
+			else{
+				$(this).parent().next().find('.weui-icon-warn').hide();
+			}
+		}
+		else{
+			$(this).parent().next().find('.weui-icon-clear').hide();
+			$(this).parent().next().find('.weui-icon-warn').hide();
+		}
+	});
+
+	$('.weui-icon-clear').click(function(){
+		$(this).parent().prev().find('input').val('');
+		$(this).hide();
+		$(this).parent().find('.weui-icon-warn').hide();
+	});
+
+	$('.weui-icon-warn').click(function(){
+		var type = $(this).parent().prev().find('input').attr('type');
+		if(type == 'password'){
+			$.toast("密码格式不对或两次密码不一致","text");
+		}
+		else if(type == 'number'){
+			$.toast("验证码为6位数字","text");
+		}
+	});
+
+	$('#sendCode').click(function(){
+		$.post("/index/send_sms.html", { "mobile": '18696100212' },
+			function(data){
+				if(data.code == 0){
+					$.toast(data.msg,"text");
+				}
+				else{
+					$('#sendCode').addClass('weui-btn_disabled');
+					$('#sendCode').attr("disabled",true); 
+					curCount = count;
+					$('#sendCode').text("重新发送"+curCount);
+					InterValObj = window.setInterval(SetRemainTime, 1000);
+				}
+		}, "json");
+	});
+
+	$('#saveBtn').click(function(){
+		$.post("/user/save_secure_pwd.html", { "loginpassword": $('#vux-x-input-32pqz').val(), "password": $('#vux-x-input-fzrko').val(), "repassword": $('#vux-x-input-c2iuh').val(), "vcode": $('#vux-x-input-2rzej').val() },
+			function(data){
+				if(data.code == 0){
+					$.toast(data.msg,"text");
+				}
+				else{
+					window.location.reload();
+				}
+		}, "json");
+	});
+});
+
+var clipboard = new Clipboard('#copyBtn');
+var clipboard2 = new Clipboard('#copyBtn2');
+
+clipboard.on('success', function(e) {
+	$.toast('已复制',"text");
+});
+
+clipboard2.on('success', function(e) {
+	$.toast('已复制',"text");
+});
+
+var InterValObj; 
+var count = 60; 
+var curCount;
+
+function SetRemainTime() { 
+	if (curCount == 0) {         
+		window.clearInterval(InterValObj);//停止计时器 
+		$("#sendCode").removeClass("weui-btn_disabled");
+		$("#sendCode").attr("disabled",false); 
+		$("#sendCode").text("发送验证码"); 
+	} 
+	else { 
+		curCount--; 
+		$("#sendCode").text("重新发送"+curCount); 
+	} 
+}
+</script>
+
+</body></html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- saved from url=(0044)http://www.abudog.com/index/home/myhome.html -->
+<html lang="en" class="pixel-ratio-2 retina android android-6 android-6-0"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="玩客云,链克,链克狗,玩客狗,玩客猴,玩客计划,赚钱宝,赚钱宝Pro,迅雷赚钱宝,迅雷玩客云,网心科技,在线托管,在线统计,云监工,在线监工,手机监工,ios监工,玩客云监工,玩客云设备监工,免费托管平台,免费平台,免费玩客云">
+    <meta name="description" content="玩客云是网心科技赚钱宝团队推出的新一代私人云盘,这是一款专门为追求高品质数字娱乐生活的年轻人而设计的私人云盘，提供畅快下载、随存随取、文件管理、远程操控、多媒体娱乐等自由畅快的娱乐生活方式。链克是玩客云共享计算生态下的基于区块链技术的原生数字资产，它的产生过程与玩客云智能硬件、共享CDN的经济应用有强关联，必须通过玩客云智能硬件分享网络带宽、存储空间等资源来获得。">
+
+    <script src="{% static 'js/hm.js' %}"></script>
+    <script src="{% static 'js/jquery-min.js' %}"></script>
+    <link href="{% static 'css/mui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mui.picker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mui.poppicker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/weui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery-weui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/layui.css' %}" rel="stylesheet">
+    <script src="{% static 'js/layui.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <title>我的Dog</title>
+<style>
+    a {
+        text-decoration: none;
+    }
+    a:link{
+        text-decoration:none;
+    }
+    a:visited{
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    a:active{
+        text-decoration:none;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        background-color: #efeff4;
+    }
+    header {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    body{
+        height: 100%;
+        max-width: 768px;
+        position: relative;
+
+    }
+    #nav{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .r{
+        position: absolute;
+        bottom: 80px;
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .r button{
+        width: 100%;
+    }
+</style><style type="text/css">html, * {-moz-user-select:text!important;}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style>
+</head>
+
+
+<body class="mui-android mui-android-6 mui-android-6-0">
+<style>
+    img{
+        height: 55px;
+        width: 55px;
+        border-radius: 5px;
+    }
+    .mui-table-view{
+        margin-top: 8px;
+    }
+    .mui-table-view-cell{
+        height: 100px;
+        padding: 0;
+    }
+    .p{
+        padding: 0;
+    }
+    .p1{
+        padding-left: 5px;
+    }
+    img{
+        margin-top: 2px;
+    }
+
+    .id {
+        position: absolute;
+        color: #9b9b9b;
+        background-color: white;
+        left: 6px;
+        top: 5px;
+        padding: 0 4px 0 1px;
+        border-radius: 0 10px 10px 0;
+        font-size: 10px;
+    }
+    .mui-ellipsis{
+        margin-top: 3px;
+    }
+    .red{
+        color: red;
+    }
+    a:hover{
+        color: red;
+    }
+</style>
+<nav id="nav" class="mui-bar mui-bar-tab">
+     <div data-v-31e443c4="" class="weui-tabbar tab">
+			<a data-v-31e443c4="" href="{% url 'home' %}" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon">
+				<!----><img data-v-31e443c4="" src="{% static 'image/home.svg' %}" >
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">首页</span>
+			</p>
+			</a>
+			<a data-v-31e443c4="" href="{% url 'market' %}" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon">
+				<img data-v-31e443c4="" src="{% static 'image/market.svg' %}" >
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">广场</span>
+			</p>
+			</a>
+			<a data-v-31e443c4="" href="{% url 'user' %}" class="weui-tabbar__item" weui-bar__item_on="">
+			<div class="weui-tabbar__icon">
+				<img data-v-31e443c4="" src="{% static 'image/mine.svg' %}">
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">我的</span>
+			</p>
+			</a>
+    </div>
+</nav>
+
+<script>
+    $(document).ready(function(){
+        var path = window.location.pathname;
+        var l = path.indexOf('home/');
+        var r = path.indexOf('.html');
+        if(l<=0)return;
+        var action = path.substring(l+5,r);
+        $('#'+action).attr('class','mui-tab-item mui-active');
+    });
+    $('#nav a').click(function(){
+        window.location.href = this.href;
+    });
+    //解决手机点击无效问题
+    $('#nav a').on('touchend',function(){
+        window.location.href = this.href;
+    });
+</script>
+<header class="mui-bar mui-bar-nav">
+    <div class="col-sm-3 col-xs-3" style="margin: 0;padding: 0">
+        <a class="mui-pull-left" href="{% url 'records' %} " style="margin: 10px 0 0 0;color: #007aff;font-size: 17px;">我的交易</a>
+    </div>
+    <div class="col-sm-6 col-xs-6">
+        <h1 class="mui-title">我的Dog</h1>
+    </div>
+    <div class="col-sm-2 col-xs-2">
+
+    </div>
+
+
+</header>
+<div class="mui-content" style="min-height: 10px">
+    <div style="margin: 5px 5px -10px 5px;">
+                <div class="alert alert-success">我的宠物数量：{{ num }}</div>
+            </div>
+
+    {% for dog in dogs %}
+    <ul class="mui-table-view" onclick="show({{ dog.id }})">
+        <li class="mui-table-view-cell mui-media">
+            <div class="col-sm-12 col-xs-12 p">
+                <div class="col-sm-3 col-xs-3 p1">
+                    <span class="id"># {{ dog.id }}</span>
+                    <img class="" src="{{ dog.image }}" style="background-color: rgb(242,244,253);height: 95px;width: 95px;">
+                </div>
+                <div class="col-sm-7 col-xs-7" style="margin-top: 5px;">
+                    {{ dog.daishu }} 代 · {{ dog.tizhong }} kg {{ dog.chengzhangzhi }}/{{ dog.shengyuzhi }}/{{ dog.juejinzhi }}
+                    <p class="mui-ellipsis">今日喂食：{{ dog.meitianweishi }} / 5</p>
+                    <p class="mui-ellipsis">生育次数：{{ dog.shengcishu }}</p>
+                    <p class="mui-ellipsis nextime" value="{{ dog.shengyushijian }}">下次生育：准备就绪</p>
+                </div>
+
+                <div class="col-sm-2 col-xs-2" style="margin-top: 5px;color: #1aad19">
+                    {%  if dog.status == 'chushou' %}
+
+                                        <span class="glyphicon glyphicon-usd"></span>
+
+
+                    <span>{{ dog.jiage }}</span>
+
+                    {% elif dog.status == 'shengzhi' %}
+
+                    <span class="glyphicon glyphicon-fire"></span><span>{{ dog.jiage }}</span>
+
+                    {% else %}
+
+
+                    {% endif %}
+            </div>
+            </div>
+
+        </li>
+    </ul>
+    {% endfor %}
+</div>
+<script>
+
+    {#      $(document).ready(function() {#}
+    {#    $.get("{% url 'check_login' %} ", function (data) {#}
+    {#        if ("1" == data.code) {#}
+                {#$(".top-bar>.user-info>.user-name").html(data.data.name);#}
+                {#$(".top-bar>.user-info").show();#}
+                {#$(".panel").html(template("userprofile", {user:data.user}));#}
+                {#$(".area-list").html(template("area-list-tmpl", {areas:data.areas}));#}
+    {#        } else {#}
+    {#            location.href = '{% url 'login' %}';#}
+    {#        }#}
+    {#    }, "json");#}
+    {##}
+    {##}
+
+    function show(id){
+        window.location = "{% url 'doginfo' %}?id="+id;
+    }
+
+
+    $('.nextime').each(function(index,doc){
+       var time = doc.getAttribute('value');
+        var now = Date.parse(new Date())/1000;
+        var nextime = 0;
+        if(time < now){
+            doc.innerText = '下次生育：准备就绪';
+        }else{
+           var ttt = setInterval(function(){
+                now = Date.parse(new Date())/1000;
+                nextime =  time - now;
+
+               doc.innerText ='下次生育：'+ showTime(nextime);
+
+                if(nextime <= 5){
+                    doc.innerText = '下次生育：准备就绪';
+                    clearInterval(ttt);
+                }
+            },1000);
+        }
+    });
+
+
+
+    function showTime(closeTime){
+
+        var day = Math.floor(closeTime / (60 * 60 * 24));
+        var hour = Math.floor(closeTime / (3600)) - (day * 24);
+        var minute = Math.floor(closeTime / (60)) - (day * 24 * 60) - (hour * 60);
+        var second = Math.floor(closeTime) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+
+        var html = hour+'小时'+minute+'分'+second+'秒';
+        if(day > 0)html = day+'天'+ html;
+        return html;
+    }
+</script>
+
+
+
+
+<script src="{% static 'js/jquery-weui.min.js' %}"></script>
+<script src="{% static 'js/mui.min.js' %}"></script>
+<script src="{% static 'js/clipboard.js' %}"></script>
+<script src="{% static 'js/mui.picker.min.js' %}"></script>
+<script src="{% static 'js/mui.picker.min.js' %}"></script>
+
+
+<script>
+    var text;
+    $('.add').click(function () {
+        text = $(this).html();
+    });
+    var clipboard = new Clipboard('.add', {
+        text: function () {
+            return text;
+        }
+    });
+    clipboard.on('success', function (e) {
+        mui.toast('已复制');
+    });
+    clipboard.on('error', function (e) {
+        mui.toast('复制失败：' + e.text)
+    });
+</script>
+<!--
+    $(function(){
+        $('#qg').hide();
+        var time = 114780;
+        time = now = time - Date.parse(new Date())/1000 ;
+        if(time <=3){
+            s();
+            return;
+        }
+        var t = setInterval(function(){
+            $('#overtime').html(showTime(time));
+            time--;
+            if(time <=3){
+                s();
+                clearInterval(t);
+                window.location.reload();
+            }
+        },1000);
+    });
+
+    function s(){
+        $('#gg').hide();
+        $('#overtimet').hide();
+        $('#overtime').html('开始抢购！');
+        $('#qg').show();
+    }
+-->
+</body></html>

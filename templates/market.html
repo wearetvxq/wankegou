@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- saved from url=(0044)http://www.abudog.com/index/home/market.html -->
+<html lang="en" class="pixel-ratio-2 retina android android-6 android-6-0"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="玩客云,链克,链克狗,玩客狗,玩客猴,玩客计划,赚钱宝,赚钱宝Pro,迅雷赚钱宝,迅雷玩客云,网心科技,在线托管,在线统计,云监工,在线监工,手机监工,ios监工,玩客云监工,玩客云设备监工,免费托管平台,免费平台,免费玩客云">
+    <meta name="description" content="玩客云是网心科技赚钱宝团队推出的新一代私人云盘,这是一款专门为追求高品质数字娱乐生活的年轻人而设计的私人云盘，提供畅快下载、随存随取、文件管理、远程操控、多媒体娱乐等自由畅快的娱乐生活方式。链克是玩客云共享计算生态下的基于区块链技术的原生数字资产，它的产生过程与玩客云智能硬件、共享CDN的经济应用有强关联，必须通过玩客云智能硬件分享网络带宽、存储空间等资源来获得。">
+{#<link href="{% static 'css/app.2b1339aa8b4bf34ca660f39fbcc8078b.css' %}" rel="stylesheet">#}
+
+        <script src="{% static 'js/hm.js' %}"></script>
+    <script src="{% static 'js/jquery-min.js' %}"></script>
+    <link href="{% static 'css/mui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mui.picker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mui.poppicker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/weui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery-weui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/layui.css' %}" rel="stylesheet">
+    <script src="{% static 'js/layui.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+{#    <script src="{% static 'js/laytpl.js' %}"></script>#}
+    <title>交易中心</title>
+ <!--
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ce8d6e9ead8de68b9d69f6921a72db93";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    -->
+    <style>
+    a {
+        text-decoration: none;
+    }
+    a:link{
+        text-decoration:none;
+    }
+    a:visited{
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    a:active{
+        text-decoration:none;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        background-color: #efeff4;
+    }
+    header {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    body{
+        height: 100%;
+        max-width: 768px;
+        position: relative;
+
+    }
+    #nav{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .r{
+        position: absolute;
+        bottom: 80px;
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .r button{
+        width: 100%;
+    }
+</style><style type="text/css">html, * {-moz-user-select:text!important;}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+
+</style>
+</head>
+
+
+<body class="mui-android mui-android-6 mui-android-6-0">
+<style>
+    .headerBtn {
+        margin-top: 11px;
+    }
+
+    .left{
+        margin-left: 5px;
+    }
+    .right{
+        margin-right: 8px;
+    }
+
+    .headerBtn a {
+        margin: 3px;
+        font-size: 15px;
+        color: #007aff;
+    }
+
+    .headerBtn a:hover {
+        color: red;
+    }
+</style>
+
+
+
+<script>
+    $(document).ready(function(){
+        var path = window.location.pathname;
+        var l = path.indexOf('home/');
+        var r = path.indexOf('.html');
+        if(l<=0)return;
+        var action = path.substring(l+5,r);
+        $('#'+action).attr('class','mui-tab-item mui-active');
+    });
+    $('#nav a').click(function(){
+        window.location.href = this.href;
+    });
+    //解决手机点击无效问题
+    $('#nav a').on('touchend',function(){
+        window.location.href = this.href;
+    });
+</script>
+<header class="mui-bar mui-bar-nav">
+
+    <div class="mui-pull-left headerBtn left">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left" style="padding: 0 3px 0 0;margin-top: -1px;"></a>
+        <a class="mui-icon mui-icon-left-nav" id="js" onclick="getlist(1)" style="padding: 0px 3px 0px 0px; margin-top: -1px; display: none;">集市</a>
+        <a class="mui-icon mui-icon-left-nav" id="qq" onclick="getlist(2)" style="padding: 0 3px 0 0;margin-top: -1px;">鹊桥</a>
+    </div>
+
+    <h1 class="mui-title" style="width: 30%;  margin: 0 auto;">交易市场	</h1>
+
+    <div class="mui-pull-right headerBtn right" style="margin: 6px">
+        <!--<a>价格</a>
+        <a>体重</a>-->
+        <!--id="search"-->
+        <a href="{% url 'market' %}#ppp" class="mui-icon mui-icon mui-icon-search" style="padding: 0 0 0 8px;"></a>
+    </div>
+
+</header>
+<div id="ppp" class="mui-popover" style="width: 100px;">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell" style="width: 100%"><a id="searchId">搜索ID</a></li>
+        <li class="mui-table-view-cell" style="width: 100%"><a id="searchDai">搜索代数</a></li>
+    </ul>
+</div>
+
+<div class="mui-content" style="min-height: 5px;background-color: #FCFCFC">
+    <style>
+    .btn-group button {
+        height: 25px;
+        width: 55px;
+    }
+
+    .btn {
+        margin: 0;
+        padding: 0;
+    }
+
+    .id {
+        position: absolute;
+        color: #9b9b9b;
+        background-color: white;
+        left: 14px;
+        top: 11px;
+        padding: 0 4px 0 1px;
+        border-radius: 0 10px 10px 0;
+        font-size: 10px;
+    }
+
+    .mui-table-view-cell img {
+        border-radius: 5px;
+    }
+
+    .info {
+        position: absolute;
+        color: #9b9b9b;
+        left: 14px;
+        bottom: 20px;
+        padding: 2px;
+        font-size: 10px;
+    }
+
+    .info p {
+        display: block;
+        font-size: 8px;
+    }
+
+    .mui-table-view-cell {
+        width: 33.33%;
+    }
+
+    .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+        font-size: 13px;
+        color: #5B5B5B;
+    }
+
+    .btn-group {
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn-group button {
+        background-color: #007aff;
+        border-color: #007aff;
+    }
+
+    .btn-group button:hover {
+        background-color: white;
+        color: #007aff;
+        border-color: #007aff;
+    }
+
+
+</style>
+</div>
+
+
+
+
+<div id="alllist" class="mui-table-view mui-grid-view" style="border-radius: 3px;padding: 0;background-color: #FCFCFC">
+
+</div>
+    {% verbatim %}
+<script id="list" type="text/html">
+    {{#for( var i=0; i<d.length; i++){ }}
+    <li class="mui-table-view-cell mui-media" >
+        <a href="/doginfo?id={{d[i].id}}">
+            <div class="mui-media-head">
+                <img class="mui-media-object" src="{{d[i].image}}" style="background-color: rgb(253,237,237)">
+                <span class="id"># {{d[i].id}}</span>
+                    <span class="info">
+                        <p align="left">{{d[i].daishu}}代</p>
+                        <p>{{d[i].chengzhangzhi}}/{{d[i].shengyuzhi}}/{{d[i].juejinzhi}}·{{d[i].tizhong}} kg</p>
+                    </span>
+            </div>
+            <div class="mui-media-body">
+                {{# if(d[i].status=='chushou'){ }}
+                    <span style="color: red">卖</span>
+                {{# }else{ }}
+                    <span style="color:#00BB00 ">育</span>
+                {{# } }}
+                {{d[i].jiage}}
+            </div>
+        </a>
+    </li>
+    {{# } }}
+</script>
+
+
+
+{% endverbatim %}
+
+
+
+
+
+
+
+<nav id="nav" class="mui-bar mui-bar-tab">
+    <div data-v-31e443c4="" class="weui-tabbar tab">
+			<a data-v-31e443c4="" href="{% url 'home' %}" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon">
+				<!----><img data-v-31e443c4="" src="{% static 'image/home.svg' %}" class="grey">
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">首页</span>
+			</p>
+			</a>
+			<a data-v-31e443c4="" href="{% url 'market' %}" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon">
+				<img data-v-31e443c4="" src="{% static 'image/market.svg' %}" class="grey">
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">广场</span>
+			</p>
+			</a>
+			<a data-v-31e443c4="" href="{% url 'user' %}" class="weui-tabbar__item" weui-bar__item_on="">
+			<div class="weui-tabbar__icon">
+				<img data-v-31e443c4="" src="{% static 'image/mine.svg' %}">
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">我的</span>
+			</p>
+			</a>
+    </div>
+
+</nav>
+
+<script>
+
+
+
+   {#$(document).ready(function() {#}
+   {#     $.get("/api/check_login", function (data) {#}
+   {#         if ("1" == data.code) {#}
+   {##}
+   {##}
+   {#         } else {#}
+   {#             location.href = '{% url 'login' %}';#}
+   {#         }#}
+   {#     }, "json");#}
+   {##}
+   {##}
+   {##}
+   {##}
+   {##}
+   {# })#}
+
+
+
+
+    var laytpl;
+    layui.use('laytpl', function () {
+        laytpl = layui.laytpl;
+        getlist(1);
+    });
+    function getlist(type,dai,id) {
+        if(type==1){
+            $('.mui-title').html('交易市场');
+            $('#js').hide();
+            $('#qq').show();
+        }
+        if(type==2){
+            $('.mui-title').html('鹊桥广场');
+            $('#js').show();
+            $('#qq').hide();
+        }
+        if(dai==undefined)dai='-1';
+        if(id==undefined)id='-1';
+
+        $.get("{% url 'homepage' %}?type="+type+"&dai="+dai+"&id="+id,function (data) {
+            if (data.code == 0) {
+                mui.toast(data.msg);
+                $.cookie('homePageType',type);
+                return false;
+            } else {
+
+                $.cookie('homePageType',type);
+                var tpl = document.getElementById('list').innerHTML, view = document.getElementById('alllist');
+                setTpl(data.msg, tpl, view);
+
+
+            }
+        });
+    }
+
+
+    $('#searchId').click(function(){
+        mui('#ppp').popover('toggle');
+        var ck = $.cookie('homePageType');
+        mui.prompt('请输入要搜索的ID','','提示',['取消','确定'],function(data){
+            if(data.index==1){
+                getlist(ck,-1,data.value);
+            }
+        })
+    });
+
+    $('#searchDai').click(function(){
+        mui('#ppp').popover('toggle');
+        var ck = $.cookie('homePageType');
+        mui.prompt('请输入要搜索的代数','','提示',['取消','确定'],function(data){
+            if(data.index==1){
+                getlist(ck,data.value,-1);
+            }
+        })
+    });
+
+    function setTpl(data, tpl, view) {
+        laytpl(tpl).render(data, function (html) {
+            view.innerHTML = html;
+        })
+    }
+
+
+</script>
+
+<script src="{% static 'js/jquery-weui.min.js' %}"></script>
+<script src="{% static 'js/mui.min.js' %}"></script>
+<script src="{% static 'js/clipboard.js' %}"></script>
+<script src="{% static 'js/mui.picker.min.js' %}"></script>
+<script src="{% static 'js/mui.picker.min.js' %}"></script>
+
+
+<script>
+    var text;
+    $('.add').click(function () {
+        text = $(this).html();
+    });
+    var clipboard = new Clipboard('.add', {
+        text: function () {
+            return text;
+        }
+    });
+    clipboard.on('success', function (e) {
+        mui.toast('已复制');
+    });
+    clipboard.on('error', function (e) {
+        mui.toast('复制失败：' + e.text)
+    });
+</script>
+
+</body>
+</html>

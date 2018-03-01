@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- saved from url=(0052)http://www.abudog.com/index/home/doginfo.html?id=503 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="玩客云,链克,链克狗,玩客狗,玩客猴,玩客计划,赚钱宝,赚钱宝Pro,迅雷赚钱宝,迅雷玩客云,网心科技,在线托管,在线统计,云监工,在线监工,手机监工,ios监工,玩客云监工,玩客云设备监工,免费托管平台,免费平台,免费玩客云">
+    <meta name="description" content="玩客云是网心科技赚钱宝团队推出的新一代私人云盘,这是一款专门为追求高品质数字娱乐生活的年轻人而设计的私人云盘，提供畅快下载、随存随取、文件管理、远程操控、多媒体娱乐等自由畅快的娱乐生活方式。链克是玩客云共享计算生态下的基于区块链技术的原生数字资产，它的产生过程与玩客云智能硬件、共享CDN的经济应用有强关联，必须通过玩客云智能硬件分享网络带宽、存储空间等资源来获得。">
+
+
+    <script src="{% static 'js/hm.js' %}"></script>
+    <script src="{% static 'js/jquery-min.js' %}"></script>
+    <link href="{% static 'css/mui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mui.picker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mui.poppicker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/weui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery-weui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/layui.css' %}" rel="stylesheet">
+    <script src="{% static 'js/layui.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+
+    <title>宠物信息</title>
+<style>
+    a {
+        text-decoration: none;
+    }
+    a:link{
+        text-decoration:none;
+    }
+    a:visited{
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    a:active{
+        text-decoration:none;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        background-color: #efeff4;
+    }
+    header {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    body{
+        height: 100%;
+        max-width: 768px;
+        position: relative;
+
+    }
+    #nav{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .r{
+        position: absolute;
+        bottom: 80px;
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .r button{
+        width: 100%;
+    }
+</style><style type="text/css">html, * {-moz-user-select:text!important;}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+
+<body ctk-perfect-ver="3.5.3" chataoke_quanneng="1">
+<style>
+    .mui-content {
+        background-color: white;
+        height: 100%;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    }
+
+    .li {
+        margin-top: 8px;
+    }
+
+    .btnc {
+        margin: 10px;
+        padding: 10px 25px 10px 25px;
+        font-size: 16px;
+        border: 2px solid;
+    }
+
+    a {
+        color: #007aff;
+    }
+
+    #slider_h a{
+        /*font-size: 12px;*/
+        line-height: 20px;
+        color: #c2c2c2;
+        margin-right: 8px;
+    }
+    .act{
+        color: #1aad19;
+        font-size: 15px;
+        border-bottom: 2px solid #1aad19;
+    }
+    #slider_h{
+        border-bottom: 1px solid #dfdfdf;
+    }
+    .mui-slider-group{
+        margin-top: 5px;
+    }
+    .mui-slider-group p{
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    .bu{
+        color: #1aad19;
+    }
+    .table{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    .wyb{
+        margin: 5px 0 5px 0;
+    }
+    .wyb div{
+        margin-top: 3px;
+        float: left;
+    }
+    .wyb div p{
+        float: left;
+    }
+    .red{
+        color: red;
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">#{{ dog.id }} 宠物信息</h1>
+    <a href="{% url 'market' %}" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">集市</a>
+</header>
+<div class="mui-content" style="box-shadow: none">
+    <div class="mui-card" id="demo">
+        <div class="mui-card-content">
+            <div class="col-sm-12 col-xs-12" style="padding: 0;margin: 10px 0 10px 0">
+                <div class="col-sm-5 col-xs-5">
+                    <img src="{{ dog.image }}" style="background-color:rgb(245,253,251);border-radius: 11px;">
+                    <div id="nowfeed" class="mui-progressbar" style="margin-top: 5px;height: 15px;">
+                        <span></span>
+                        <p style="position: absolute;color: white;margin-left: 40%">{{ dog.meitianweishi }} / 5</p>
+                    </div>
+                </div>
+                <div class="col-sm-7 col-xs-7" style="margin-top: -10px;">
+                    <h1 class="li">{{ dog.daishu }}代 {{ dog.tizhong }} kg</h1>
+
+                    <h3 class="li">成长：{{ dog.chengzhangzhi }} </h3>
+                    <p>每投食 1 wkc 增加 {{ dog.chengzhangzhi }} kg</p>
+                    <h3 class="li">生育：{{ dog.shengyuzhi }} </h3>
+                    <p>{{ dog.shengcishu }} 次生育</p>
+                    <p id="nextime" value="{{ dog.shengyushijian }}">下次生育：准备就绪</p>
+
+                    <h3 class="li">掘金：{{ dog.juejinzhi }} </h3>
+
+                    <p>掘金 {{ juejin.count }} 次，收入 {{ juejinall }} wkc</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xs-12" style="margin-bottom: 5px;">
+                <div id="slider_h">
+                    <a id="jj" class="act">简介</a>
+                    <a id="wy">喂养记录</a>
+                    <a id="ju">掘金记录</a>
+                </div>
+                <div class="mui-slider" data-slider="1">
+                    <div class="mui-slider-group" style="transform: translate3d(0px, 0px, 0px) translateZ(0px); transition-duration: 0ms;">
+                        <div class="mui-slider-item jj">
+                            <p>诞生于 {{ dog.chushengdata }} 父亲为#{{ dog.fuqingid }} 母亲为#{{ dog.muqingid }}</p>
+                        </div>
+                        <div class="mui-slider-item wy">
+                            <table class="table bu">
+                                <tbody>
+                                {% for l in weishi %}
+                                <tr style="font-size: 8px;">
+                                    <td style="border-top:none;padding: 2px;float: left">{{ l.weishidata }}</td>
+                                    <td class="bu" style="border-top:none;padding: 2px">{{ l.weishinumber }}wkc</td>
+                                    <td class="bu" style="border-top:none;padding: 2px">{{ l.weishizhengzhangtishu }}kg</td>
+                                    <td class="bu" style="border-top:none;padding: 2px">
+                                        {% if l.weishizhengshuxing == "juejue" %}
+                                          掘金值增加
+                                            {% elif l.weishizhengshuxing == "tizhong" %}
+                                            成长值增加
+                                            {% elif l.weishizhengshuxing == "shengyu" %}
+                                            生育值增加
+                                            {% elif l.weishizhengshuxing == "weizhengjia" %}
+                                            未增加属性
+                                        {% endif %}
+
+
+                                        {{ l.weishizhengshuxingzhi }}
+
+                                    </td>
+                                </tr>
+
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mui-slider-item ju">
+                            <table class="table bu">
+                                <tbody>
+                                {% for l in juejin %}
+                                <tr>
+                                    <td style="border-top:none;padding: 2px;float: left">{{ l.juejindata }}</td>
+                                    <td style="border-top:none;padding: 2px" id="bu">+{{ l.juejinnumber }} wkc</td>
+                                </tr>
+
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            {% if xid == '100' %}
+        <div class="mui-card">
+            <div class="mui-card-header">出售/生育/喂养</div>
+            <div class="mui-card-content" style="text-align: center;margin: 5px 0 5px 0">
+                <div class="mui-button-group">
+                                        <div class="col-sm-12 col-xs-12" style="margin-bottom: 5px;">
+                        <div class="col-sm-4 col-xs-4">
+                            <button class="btn btn-success" onclick="t(3)">投食</button>
+                        </div>
+                        <div class="col-sm-4 col-xs-4">
+                            <button class="btn btn-danger" onclick="t(1)">出售</button>
+                        </div>
+                        <div class="col-sm-4 col-xs-4">
+                            <button class="btn btn-success" onclick="t(2)">生育</button>
+                        </div>
+                    </div>
+                    <div id="ts" class="col-sm-12 col-xs-12 wyb" style="display:none ">
+{#                        <div><p>请使用您绑定的钱包</p><p style="color: black">0x23c2ae9082670d8b01ef53707d7fbe5b1730a9df</p></div>#}
+{#                        <div><p>向下方钱包转账 ↓ (点击复制)</p>#}
+{#                            <p class="add" style="color: #1aad19">0x1546727db24f303f14dcae633ff3b80ec36acaf2</p>#}
+{#                        </div>#}
+                        <div><p>请输入喂食金额，确认喂食将直接使用用户余额喂食，建议分开喂食，提高暴击几率，最小喂食量为<span class="red">1</span> wkc</p></div>
+                        <input id="typevaluenow" style="font-size: 15px" type="text" class="mui-input-clear " value="" data-input-clear="2">
+                        <button id="sellnow" class="mui-btn mui-btn-danger" style="width: 100%" onclick="weishi({{ dog.id }})">确定喂食</button>
+                        <div><p>每日喂食最大量为<span class="red">5</span> wkc， 喂食请请先检查余额</p></div>
+{#                        <div><p>转账 投食金额.id，如投食 <span class="red">3</span> wkc，转账金额为 <span class="red">3.182</span></p></div>#}
+{#                        <div><p>最大总投食 <span class="red">5</span> wkc<span class="red">投多无效</span>将自动充值到账户余额</p></div>#}
+                    </div>
+                                    </div>
+
+                <div id="hide" style="display:none">
+                    <hr style="margin: 5px 0 0 0">
+                    <div class="mui-input-group">
+                        <div class="mui-input-row">
+                            <label id="type" style="font-size: 15px">
+                                                            </label>
+                            <input id="typevalue" style="font-size: 15px" type="text" class="mui-input-clear " value="" data-input-clear="2"><span class="mui-icon mui-icon-clear mui-hidden"></span>
+                        </div>
+                    </div>
+                    <hr style="margin: 0">
+                    <div class="mui-button-group" style="margin: 0 5px 0 5px;">
+
+                                                <p style="font-size: 8px;float: left;margin: 5px">
+                            <span style="color: red">#{{ dog.id }}</span>
+                            手续费3.0%，冻结余额
+
+                            <span id="lockmoney">{% widthratio dog.jiage 100 3%}</span> wkc，以实际成交价为准
+                        </p>
+                        <button id="sell" class="mui-btn mui-btn-danger" style="width: 100%" onclick="unsell({{ dog.id }},1)">确定出售</button>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        {% elif xid == '110' %}
+
+        <div class="mui-card">
+        <div class="mui-card-header" style="color: red">出售</div>
+        <div class="mui-card-body" style="text-align: center">
+            <button class="mui-btn mui-btn-danger mui-btn-outlined btnc" onclick="buy({{ dog.id }},1)">
+                {{ dog.jiage }} wkc <br>购买
+            </button>
+        </div>
+    </div>
+            <div class="mui-card">
+            <div class="mui-card-header">出售/生育/喂养</div>
+            <div class="mui-card-content" style="text-align: center;margin: 5px 0 5px 0">
+                <div class="mui-button-group">
+                                    </div>
+
+                <div id="hide">
+                    <hr style="margin: 5px 0 0 0">
+                    <div class="mui-input-group">
+                        <div class="mui-input-row">
+                            <label id="type" style="font-size: 15px">
+                                出售中                            </label>
+                            <input id="typevalue" style="font-size: 15px" type="text" class="mui-input-clear " value="" data-input-clear="2"><span class="mui-icon mui-icon-clear mui-hidden"></span>
+                        </div>
+                    </div>
+                    <hr style="margin: 0">
+                    <div class="mui-button-group" style="margin: 0 5px 0 5px;">
+
+                                                <button class="mui-btn mui-btn-danger" style="width: 100%;margin-top: 5px;" onclick="unsell({{ dog.id }},2)">撤回订单</button>
+                                            </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% elif xid == '101' %}
+
+        <div class="mui-card">
+        <div class="mui-card-header" style="color: #1aad19">生育</div>
+        <div class="mui-card-body" style="text-align: center">
+
+            <button class="mui-btn mui-btn-success mui-btn-outlined btnc" onclick="buy({{ dog.id }},2)">
+                    {{ dog.jiage }} wkc <br>生育
+            </button>
+        </div>
+    </div>
+
+
+            <div class="mui-card">
+            <div class="mui-card-header">出售/生育/喂养</div>
+            <div class="mui-card-content" style="text-align: center;margin: 5px 0 5px 0">
+                <div class="mui-button-group">
+                                    </div>
+
+                <div id="hide">
+                    <hr style="margin: 5px 0 0 0">
+                    <div class="mui-input-group">
+                        <div class="mui-input-row">
+                            <label id="type" style="font-size: 15px">
+                                生育中                            </label>
+                            <input id="typevalue" style="font-size: 15px" type="text" class="mui-input-clear " value="{{ dog.jiage }}" data-input-clear="2"><span class="mui-icon mui-icon-clear mui-hidden"></span>
+                        </div>
+                    </div>
+                    <hr style="margin: 0">
+                    <div class="mui-button-group" style="margin: 0 5px 0 5px;">
+
+                                                <button class="mui-btn mui-btn-danger" style="width: 100%;margin-top: 5px;" onclick="unsell({{ dog.id }},2)">撤回订单</button>
+                                            </div>
+                </div>
+            </div>
+        </div>
+
+            {% elif xid == '010' %}
+
+
+                  <div class="mui-card">
+        <div class="mui-card-header" style="color: red">出售</div>
+        <div class="mui-card-body" style="text-align: center">
+            <button class="mui-btn mui-btn-danger mui-btn-outlined btnc" onclick="buy({{ dog.id }},1)">
+                {{ dog.jiage }} wkc <br>购买
+            </button>
+        </div>
+    </div>
+                {% elif xid == '001' %}
+                    <div class="mui-card">
+        <div class="mui-card-header" style="color: #1aad19">生育</div>
+        <div class="mui-card-body" style="text-align: center">
+
+            <button class="mui-btn mui-btn-success mui-btn-outlined btnc" onclick="buy({{ dog.id }},2)">
+                    {{ dog.jiage }} wkc <br>生育
+            </button>
+        </div>
+    </div>
+          {% elif xid == '000' %}
+
+        {% endif %}
+
+
+
+    <div class="mui-card">
+        <div class="mui-card-header">宠物主人</div>
+            <div class="mui-card-content col-sm-12 col-xs-12" style="padding: 0">
+            <div class="com-sm-4 col-xs-3">
+                <img src="{{ dog.image }}" style="background-color:rgb(245,253,251);border-radius: 50%;margin: 5px;height: 55px;">
+            </div>
+            <div class="com-sm-8 col-xs-9" style="margin-top: 8px;font-size:22px;">
+                {{ dog.username }}               <p>获得时间：{{ dog.chushengdata }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'js/jquery-weui.min.js' %}"></script>
+<script src="{% static 'js/mui.min.js' %}"></script>
+<script src="{% static 'js/clipboard.js' %}"></script>
+<script src="{% static 'js/mui.picker.min.js' %}"></script>
+
+
+
+
+<script>
+    var type=-1;
+    mui.init();
+    var userPicker = new mui.PopPicker();
+    mui('#nowfeed').progressbar({progress:{{ dog.meitianweishi }}/5*100}).show();
+
+    $('#jj').click(function(){
+        $('.jj').show();
+        $('.wy').hide();
+        $('.ju').hide();
+        $('#jj').attr('class','act');
+        $('#wy').attr('class','');
+        $('#ju').attr('class','');
+    });
+    $('#wy').click(function(){
+        $('.jj').hide();
+        $('.wy').show();
+        $('.ju').hide();
+        $('#jj').attr('class','');
+        $('#wy').attr('class','act');
+        $('#ju').attr('class','');
+    });
+    $('#ju').click(function(){
+        $('.jj').hide();
+        $('.wy').hide();
+        $('.ju').show();
+        $('#jj').attr('class','');
+        $('#wy').attr('class','');
+        $('#ju').attr('class','act');
+    });
+
+
+{#手续费#}
+    $('#typevalue').bind('input propertychange',function(){
+        var value = $(this).val();
+        var sxf = 0.0;
+        var fl =  '3.0';
+        if(value > 0)sxf = value * fl / 100;
+        $('#lockmoney').html(sxf);
+    });
+
+
+    function t(type) {
+        if(type==3){
+            $('#ts').show();
+            $('#hide').hide();
+            return;
+        }
+        $('#ts').hide();
+        $('#hide').show();
+        $('#type').html(type == 1 ? '出售价格' : '生育价格');
+        $('#type').css('color', type == 1 ? 'red' : '#007aff');
+        $('#typevalue').attr('placeholder', type == 1 ? '请输入出售价格' : '请输入生育价格');
+        $('#sell').html(type == 1 ? '确定出售' : '确定生育');
+        $('#sell').attr('class',type == 1 ? 'btn btn-danger' : 'btn btn-success');
+        this.type = type;
+    }
+
+    function unsell(id,type){
+
+
+        mui.prompt('', '请输入交易密码', '提示', ['取消', '确定'], function (data) {
+            if (data.index == 0) return;
+            var pass = data.value;
+            if (pass == '') {
+                mui.toast('请输入交易密码');
+                return;
+            }else{
+
+                if(type==1 && this.type==-1)return false;
+                if(type==1){
+                    var t = this.type == 1 ?'出售':'生育';
+                    var money = $('#typevalue').val();
+                    money = Math.round(money*100)/100;
+                    if(money<=0){
+                        mui.toast('这价格太低了吧');
+                        return false;
+                    }
+
+                    mui.confirm('确定 【'+t+'】 价格为：【 '+money+' 】','提示',['确定','取消'], function (data) {
+                        if(data.index==0){
+                            un(id,type,money,pass);
+                        }
+                    })
+                }else if(type==2){
+                    un(id,type,0,pass);
+                }
+            }
+        });
+
+
+
+    }
+    function un(id,type,money,pass){
+        $.get("{% url 'unsell' %}?id="+id+"&type="+type+"&type2="+this.type+"&money="+money+"&pass="+pass,function(data){
+            mui.toast(data.msg);
+            if(data.code==1){
+                window.location.reload();
+            }
+        });
+    }
+
+
+
+
+
+      function buy(id, type) {
+        var myDogId = -1;
+        if(type==2){
+            $.ajax({
+                type:'get',
+                url:"{% url 'getmydog' %}",
+                async:false,
+                success:function(data){
+
+                    console.log(data);
+                    if(data.code <=0 ){
+                        mui.toast('如果您没有宠物的话 还是去集市买一只吧');
+                        return ;
+                    }
+
+
+
+
+                    userPicker.setData(data.dogs);
+                    userPicker.show(function(items) {
+                         console.log(items);
+                        myDogId = items[0]['value'];
+                        if(myDogId == undefined){
+                            myDogId = -1;
+                            mui.toast('请选择一只宠物');
+                            return ;
+                        }
+                        BuyT(id, type,myDogId);
+                    })
+                }
+            });
+        }else{
+            BuyT(id, type,myDogId);
+        }
+
+    }
+
+
+
+
+    function BuyT(id, type,myDogId){
+        mui.prompt('', '请输入交易密码', '提示', ['取消', '确定'], function (data) {
+            if (data.index == 0) return;
+            if (data.value == '') {
+                mui.toast('请输入交易密码');
+                return;
+            }else{
+                BuyS(id, type,data.value,myDogId);
+            }
+        });
+    }
+
+    $.ajaxSetup({
+        data:{csrfmiddlewaretoken:'{{ csrf_token }}'},
+    });
+
+    function BuyS(id, type,pass,myDogId){
+        $.post("{% url 'buy' %}", {id: id, type: type, pass: pass,myDogId:myDogId}, function (data) {
+
+            if (data.code == 1) {
+                mui.toast(data.msg);
+
+                window.location = "{% url 'buy' %}?id="+id+"&mydogid="+myDogId;
+            }
+        });
+    }
+
+
+
+
+
+    $(function(){
+        var doc = document.getElementById('nextime');
+        var time = doc.getAttribute('value');
+        var now = Date.parse(new Date())/1000;
+        var nextime = 0;
+        if(time < now){
+            doc.innerText = '下次生育：准备就绪';
+        }else{
+            var ttt = setInterval(function(){
+                now = Date.parse(new Date())/1000;
+                nextime =  time - now;
+
+                doc.innerText ='下次生育：'+showTime(nextime);
+
+                if(nextime <= 5){
+                    doc.innerText = '下次生育：准备就绪';
+                    clearInterval(ttt);
+                }
+            },1000);
+        }
+    });
+
+  $('.nextime').each(function(index,doc){
+       var time = doc.getAttribute('value');
+        var now = Date.parse(new Date())/1000;
+        var nextime = 0;
+        if(time < now){
+            doc.innerText = '下次生育：准备就绪';
+        }else{
+           var ttt = setInterval(function(){
+                now = Date.parse(new Date())/1000;
+                nextime =  time - now;
+
+               doc.innerText ='下次生育：'+ showTime(nextime);
+
+                if(nextime <= 5){
+                    doc.innerText = '下次生育：准备就绪';
+                    clearInterval(ttt);
+                }
+            },1000);
+        }
+    });
+
+
+    function showTime(closeTime){
+
+        var day = Math.floor(closeTime / (60 * 60 * 24));
+        var hour = Math.floor(closeTime / (3600)) - (day * 24);
+        var minute = Math.floor(closeTime / (60)) - (day * 24 * 60) - (hour * 60);
+        var second = Math.floor(closeTime) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+
+        var html = hour+'小时'+minute+'分'+second+'秒';
+        if(day > 0)html = day+'天'+ html;
+        return html;
+    }
+</script>
+<div class="mui-poppicker">
+    <div class="mui-poppicker-header">
+        <button class="mui-btn mui-poppicker-btn-cancel">取消</button>
+        <button class="mui-btn mui-btn-blue mui-poppicker-btn-ok">确定</button>
+        <div class="mui-poppicker-clear"></div>
+    </div>
+    <div class="mui-poppicker-body">
+        <div class="mui-picker" style="width: 100%;">
+            <div class="mui-picker-inner">
+                <div class="mui-pciker-rule mui-pciker-rule-ft">
+                </div>
+                <ul class="mui-pciker-list"></ul>
+                <div class="mui-pciker-rule mui-pciker-rule-bg"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+        function weishi(id){
+
+        mui.confirm('确定支付订单？','提示',['取消','确定'],function(data){
+            if(parseInt(data.index,10) == 1){
+
+
+                var weishi = $('#typevaluenow').val();
+
+        $.get("{% url 'weishi' %}?id="+id+"&weishi="+weishi,function(data){
+
+            if(data.code==1){
+                mui.toast(data.msg);
+                window.location.reload();
+
+            }
+            else {
+                mui.toast(data.msg);
+                return ;
+            }
+           });
+            }
+        });
+        }
+
+
+    var text;
+    $('.add').click(function () {
+        text = $(this).html();
+    });
+    var clipboard = new Clipboard('.add', {
+        text: function () {
+            return text;
+        }
+    });
+    clipboard.on('success', function (e) {
+        mui.toast('已复制');
+    });
+    clipboard.on('error', function (e) {
+        mui.toast('复制失败：' + e.text)
+    });
+</script>
+
+</body></html>

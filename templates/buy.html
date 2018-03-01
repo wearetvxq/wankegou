@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- saved from url=(0059)http://www.abudog.com/index/user/buy.html?id=546&mydogid=-1 -->
+<html lang="en" class="pixel-ratio-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="玩客云,链克,链克狗,玩客狗,玩客猴,玩客计划,赚钱宝,赚钱宝Pro,迅雷赚钱宝,迅雷玩客云,网心科技,在线托管,在线统计,云监工,在线监工,手机监工,ios监工,玩客云监工,玩客云设备监工,免费托管平台,免费平台,免费玩客云">
+    <meta name="description" content="玩客云是网心科技赚钱宝团队推出的新一代私人云盘,这是一款专门为追求高品质数字娱乐生活的年轻人而设计的私人云盘，提供畅快下载、随存随取、文件管理、远程操控、多媒体娱乐等自由畅快的娱乐生活方式。链克是玩客云共享计算生态下的基于区块链技术的原生数字资产，它的产生过程与玩客云智能硬件、共享CDN的经济应用有强关联，必须通过玩客云智能硬件分享网络带宽、存储空间等资源来获得。">
+
+    <script src="{% static 'js/hm.js' %}"></script>
+    <script src="{% static 'js/jquery-min.js' %}"></script>
+    <link href="{% static 'css/mui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mui.picker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mui.poppicker.css' %}" rel="stylesheet">
+    <link href="{% static 'css/weui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery-weui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/layui.css' %}" rel="stylesheet">
+    <script src="{% static 'js/layui.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+
+    {% if type == -1 %}
+    <title>购买</title>
+    {% else %}
+        <title>交配</title>
+    {% endif %}
+    
+
+<style>
+    a {
+        text-decoration: none;
+    }
+    a:link{
+        text-decoration:none;
+    }
+    a:visited{
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration:none;
+    }
+    a:active{
+        text-decoration:none;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        background-color: #efeff4;
+    }
+    header {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    body{
+        height: 100%;
+        max-width: 768px;
+        position: relative;
+
+    }
+    #nav{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .r{
+        position: absolute;
+        bottom: 80px;
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .r button{
+        width: 100%;
+    }
+</style><style type="text/css">html, * {-moz-user-select:text!important;}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+
+<body ctk-perfect-ver="3.5.3" chataoke_quanneng="1">
+<style>
+    .mui-content{
+        background-color: white;
+        height: 100%;
+    }
+    .li{
+        margin-top: 5px;
+    }
+    #bod h1{
+        margin-top: 15px;
+    }
+    #bod h2{
+        margin-top: 5px;
+    }
+    #ft p{
+        margin-top: 5px;
+    }
+    .red{
+        color: red;
+    }
+
+</style>
+<header class="mui-bar mui-bar-nav">
+
+
+
+    <h1 class="mui-title">
+          {% if type == -1 %}
+     购买 #{{ dog.id }}
+    {% else %}
+              与#{{ dog.id }}交配
+    {% endif %}
+
+
+
+    </h1>
+
+
+
+</header>
+<input value="546" id="dogId" style="display: none">
+<div class="mui-content">
+    <div class="mui-card">
+        <div class="mui-card-content">
+            <div class="col-sm-12 col-xs-12" style="padding: 0;margin: 10px 0 10px 0">
+                <div class="col-sm-5 col-xs-5">
+                    <img src="{{ dog.image }}" style="background-color:rgb(249,245,246);border-radius: 11px;">
+                </div>
+                <div class="col-sm-7 col-xs-7" style="padding-left: 0">
+                    <h1 class="li">{{ dog.daishu }} 代</h1>
+                    <h2 class="li">体重：{{ dog.tizhong }} kg</h2>
+                    <h3 class="li">生育：{{ dog.shengyuzhi }}</h3>
+                    <p class="li">{{ dog.shengcishu }}次生育</p>
+                    <p class="li" id="nextime" value="{{ dog.shengyushijian }}">下次生育：准备就绪</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mui-card" id="bod">
+        <div class="mui-card-content" style="text-align: center;padding: 5px;">
+            <h1 style="font-size: 15px;">确定订单后将无法撤销，请仔细确认</h1>
+             <h1 style="font-size: 15px;">目前锁单功能待完善，进入该页面，暂不代表您以锁单</h1>
+           <h1 style="font-size: 15px;">其他用户依旧可以抢单，请考虑后尽快确认</h1>
+                <h1 style="font-size: 15px;">锁单功能尽快完善中，内测期间会逐步完善</h1>
+{#            <h1 class="add">0x23c2ae9082670d8b01ef53707d7fbe5b1730a9df</h1>#}
+{#            <h1 style="font-size: 15px;">向下方卖家钱包 <p style="margin-top: 2px;">点击钱包地址即可复制</p></h1>#}
+{#            <h1 class="add" style="color: #1aad19">0xf24ac0b7409fce02929cb41c0c25dee253633d3c</h1>#}
+            <h1 style="font-size: 20px;">
+                                    {% if type == -1 %}
+    确定价格
+    {% else %}
+                                        交配价格
+    {% endif %}
+
+                <span class="red">{{ dog.jiage }}</span> wkc</h1>
+            <br>
+            <h2>请在 <span id="time" value="1516610203" class="red">10分0秒</span> 内完成确定</h2>
+            <h2>超时订单将记录您的信誉值</h2>
+            <h2>信誉值过低将被处罚</h2>
+            <button class="btn btn-danger" style="margin-top: 10px;" onclick="unBuy({{ dog.id }},{{ type }})">
+                          {% if type == -1 %}
+    确定购买
+    {% else %}
+                              确定交配
+    {% endif %}
+
+            </button>
+        </div>
+    </div>
+    <div class="mui-card" id="ft">
+        <div class="mui-card-content" style="padding: 10px 5px 10px 5px;">
+            <p>*请务必使用<span class="red">账号绑定的钱包</span>进行交易，否则会钱物两空</p>
+            <p>*购买时请仔细核对<span class="red">用户余额</span>与<span class="red">
+
+                                        {% if type == -1 %}
+   购买价格
+    {% else %}
+                                            交配价格
+    {% endif %}
+            </span>是否符合要求</p>
+            <p>*请在有效时间内确认订单，否则将无法获得宠物，并降低您的信誉</p>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        var doc = document.getElementById('nextime');
+        var time = doc.getAttribute('value');
+        var now = Date.parse(new Date())/1000;
+        var nextime = 0;
+        if(time < now){
+            doc.innerText = '下次生育：准备就绪';
+        }else{
+            var ttt = setInterval(function(){
+                now = Date.parse(new Date())/1000;
+                nextime =  time - now;
+
+                doc.innerText ='下次生育：'+timeToStr(nextime);
+
+                if(nextime <= 5){
+                    doc.innerText = '下次生育：准备就绪';
+                    clearInterval(ttt);
+                }
+
+            },1000);
+        }
+        var ntime = $('#time');
+        //var all = 10 * 60;
+        var dd = document.getElementById('time');
+        var buytime = dd.getAttribute('value');
+        var all = parseInt(buytime) + 600 - now;
+
+
+
+
+    });
+
+
+       {#function BuyS(id, type,pass,myDogId){#}
+       {# $.post("{% url 'buy' %}", {id: id, type: type, pass: pass,myDogId:myDogId}, function (data) {#}
+       {##}
+       {#     if (data.code == 1) {#}
+       {#         mui.toast(data.msg);#}
+       {#         window.location = "{% url 'buy' %}?id="+id+"&mydogid="+myDogId;#}
+       {#     }#}
+       {# });#}
+
+    function unBuy(id,type){
+
+        mui.confirm('确定支付订单？','提示',['取消','确定'],function(data){
+            if(parseInt(data.index,10) == 1){
+
+    $.ajaxSetup({
+        data:{csrfmiddlewaretoken:'{{ csrf_token }}'},
+    });
+        $.post("{% url 'getnowdog' %}", {id: id, type: type}, function (data) {
+
+            if (data.code == 1) {
+                mui.toast(data.msg);
+                mui.toast(data.id);
+                window.location = "{% url 'doginfo' %}?id="+data.id;
+            }
+            else {mui.toast(data.msg);
+            return ;
+            }
+
+        },'json');
+
+
+            }
+        });
+
+
+    }
+
+    function timeToStr(time){
+        var day= 0,s= 0,f= 0,m=0;
+        if(time > 24 * 3600){
+            day = parseInt(time / (24 * 3600));
+        }
+        if(time > 3600){
+            s = parseInt((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60);
+        }
+        if(time > 60){
+            f = parseInt((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60);
+        }
+        m = time % 60;
+        var str ='';
+        if(day>0)str +=day+"天";
+        if(s>0)str +=s+"时";
+        if(f>0)str +=f+"分";
+        str +=m+"秒";
+        return str;
+    }
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+</script>
+
+<script src="{% static 'js/jquery-weui.min.js' %}"></script>
+<script src="{% static 'js/mui.min.js' %}"></script>
+<script src="{% static 'js/clipboard.js' %}"></script>
+<script src="{% static 'js/mui.picker.min.js' %}"></script>
+
+<!--
+    var checkBuy = setInterval(function(){
+            var id=$('#dogId').val();
+            var mydogid = getUrlParam('mydogid');
+            $.get("/index/user/checkbuy.html?id="+id+"&mydogid="+mydogid,function(data){
+                mui.toast(data.msg);
+                if(data.code==1){
+                    if(data.data>0)id=data.data;
+                    window.location="/index/home/doginfo.html?id="+id;
+                }
+            });
+        },5000);
+
+
+
+        var n = setInterval(function(){
+            all--;
+            ntime.html(timeToStr(all));
+            if(all<=0){
+                clearInterval(n);
+               /* window.location.reload();*/
+                window.location="{% url 'doginfo' %}?id="+id;
+            }
+        },1000);
+-->
+<script>
+    var text;
+    $('.add').click(function () {
+        text = $(this).html();
+    });
+    var clipboard = new Clipboard('.add', {
+        text: function () {
+            return text;
+        }
+    });
+    clipboard.on('success', function (e) {
+        mui.toast('已复制');
+    });
+    clipboard.on('error', function (e) {
+        mui.toast('复制失败：' + e.text)
+    });
+</script>
+
+{#<div class="mui-toast-container mui-active"><div class="mui-toast-message">检测交易中</div>#}
+{#</div>#}
+
+
+</body></html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>链克熊</title>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery-weui.min.js"></script>
+<link href="static/css/app.2b1339aa8b4bf34ca660f39fbcc8078b.css" rel="stylesheet">
+<link href="static/css/jquery-weui.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+	<div data-v-31e443c4="" class="container" img-set="/static/favicon.png">
+		<div data-v-7bb213c7="" data-v-31e443c4="" class="page">
+			<div data-v-7bb213c7="" class="head">
+				<h1 data-v-7bb213c7="">首页</h1>
+			</div>
+			<div data-v-7bb213c7="" class="vux-sticky-box vux-sticky">
+				<div data-v-7bb213c7="" class="filter">
+					<ul data-v-7bb213c7="" class="status">
+						<li data-v-7bb213c7="" class="active">全部</li>
+						<li data-v-7bb213c7="" class="">集市</li>
+						<li data-v-7bb213c7="" class="">洞穴</li>
+						<li data-v-7bb213c7="" class="">历史</li>
+					</ul>
+					<ul data-v-7bb213c7="" class="order">
+						<li data-v-7bb213c7="" class="active up">代数</li>
+						<li data-v-7bb213c7="" class="up">体重</li>
+						<li data-v-7bb213c7="" class="up">收益</li>
+					</ul>
+				</div>
+			</div>
+			<div data-v-7bb213c7="" class="monkeys">
+				<div data-v-fb2c869e="" data-v-7bb213c7="" class="infinite-loading-container" style="display:none;text-align:center;">
+	<div data-v-fb2c869e="">
+		<span data-v-7bb213c7="" class="vux-spinner vux-spinner-lines" data-v-fb2c869e=""><svg viewbox="0 0 64 64"><g stroke-width="7" stroke-linecap="round"><line x1="10" x2="10" y1="17.7798" y2="44.4403"><animate attributename="y1" dur="750ms" values="16;18;28;18;16;16" repeatcount="indefinite"></animate><animate attributename="y2" dur="750ms" values="48;46;36;44;48;48" repeatcount="indefinite"></animate><animate attributename="stroke-opacity" dur="750ms" values="1;.4;.5;.8;1;1" repeatcount="indefinite"></animate></line><line x1="24" x2="24" y2="36.8807" y1="26.8992"><animate attributename="y1" dur="750ms" values="16;16;18;28;18;16" repeatcount="indefinite"></animate><animate attributename="y2" dur="750ms" values="48;48;46;36;44;48" repeatcount="indefinite"></animate><animate attributename="stroke-opacity" dur="750ms" values="1;1;.4;.5;.8;1" repeatcount="indefinite"></animate></line><line x1="38" x2="38" y2="44.8992" y1="19.1008"><animate attributename="y1" dur="750ms" values="18;16;16;18;28;18" repeatcount="indefinite"></animate><animate attributename="y2" dur="750ms" values="44;48;48;46;36;44" repeatcount="indefinite"></animate><animate attributename="stroke-opacity" dur="750ms" values=".8;1;1;.4;.5;.8" repeatcount="indefinite"></animate></line><line x1="52" x2="52" y2="47.7798" y1="16.2202"><animate attributename="y1" dur="750ms" values="28;18;16;16;18;28" repeatcount="indefinite"></animate><animate attributename="y2" dur="750ms" values="36;44;48;48;46;36" repeatcount="indefinite"></animate><animate attributename="stroke-opacity" dur="750ms" values=".5;.8;1;1;.4;.5" repeatcount="indefinite"></animate></line></g></svg></span>
+	</div>
+</div>
+				<div data-v-7bb213c7="" class="panel" id="bearlist">
+					<div class="weui-pull-to-refresh__layer" style="display:none;">
+						<div class='weui-pull-to-refresh__arrow'></div>
+						<div class='weui-pull-to-refresh__preloader'></div>
+						<div class="down">下拉刷新</div>
+						<div class="up">释放刷新</div>
+						<div class="refresh">正在刷新</div>
+					</div>
+					
+					<div class="weui-loadmore" style="display:none;text-align:center;">
+						<i class="weui-loading"></i>
+						<span class="weui-loadmore__tips">正在加载</span>
+					</div>
+				</div>
+			</div>
+
+			<div data-v-7bb213c7="" class="records" style="display:none;">
+				<div data-v-7bb213c7="" class="tab">
+					<div data-v-7bb213c7="" class="">生育记录</div>
+					<div data-v-7bb213c7="" class="active">交易记录</div>
+				</div>
+				<div data-v-fb2c869e="" data-v-7bb213c7="" class="infinite-loading-container" style="display:none;text-align:center;">
+	<div data-v-fb2c869e="">
+		<span data-v-7bb213c7="" class="vux-spinner vux-spinner-lines" data-v-fb2c869e=""><svg viewbox="0 0 64 64"><g stroke-width="7" stroke-linecap="round"><line x1="10" x2="10" y1="17.7798" y2="44.4403"><animate attributename="y1" dur="750ms" values="16;18;28;18;16;16" repeatcount="indefinite"></animate><animate attributename="y2" dur="750ms" values="48;46;36;44;48;48" repeatcount="indefinite"></animate><animate attributename="stroke-opacity" dur="750ms" values="1;.4;.5;.8;1;1" repeatcount="indefinite"></animate></line><line x1="24" x2="24" y2="36.8807" y1="26.8992"><animate attributename="y1" dur="750ms" values="16;16;18;28;18;16" repeatcount="indefinite"></animate><animate attributename="y2" dur="750ms" values="48;48;46;36;44;48" repeatcount="indefinite"></animate><animate attributename="stroke-opacity" dur="750ms" values="1;1;.4;.5;.8;1" repeatcount="indefinite"></animate></line><line x1="38" x2="38" y2="44.8992" y1="19.1008"><animate attributename="y1" dur="750ms" values="18;16;16;18;28;18" repeatcount="indefinite"></animate><animate attributename="y2" dur="750ms" values="44;48;48;46;36;44" repeatcount="indefinite"></animate><animate attributename="stroke-opacity" dur="750ms" values=".8;1;1;.4;.5;.8" repeatcount="indefinite"></animate></line><line x1="52" x2="52" y2="47.7798" y1="16.2202"><animate attributename="y1" dur="750ms" values="28;18;16;16;18;28" repeatcount="indefinite"></animate><animate attributename="y2" dur="750ms" values="36;44;48;48;46;36" repeatcount="indefinite"></animate><animate attributename="stroke-opacity" dur="750ms" values=".5;.8;1;1;.4;.5" repeatcount="indefinite"></animate></line></g></svg></span>
+	</div>
+</div>
+				<div data-v-7bb213c7="" class="panel" id="recordlist">
+					<div class="weui-pull-to-refresh__layer" style="display:none;">
+						<div class='weui-pull-to-refresh__arrow'></div>
+						<div class='weui-pull-to-refresh__preloader'></div>
+						<div class="down">下拉刷新</div>
+						<div class="up">释放刷新</div>
+						<div class="refresh">正在刷新</div>
+					</div>
+					
+					<div class="weui-loadmore" style="display:none;text-align:center;">
+						<i class="weui-loading"></i>
+						<span class="weui-loadmore__tips">正在加载</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+						<div data-v-31e443c4="" class="weui-tabbar tab">
+			<a data-v-31e443c4="" href="homeindex.html" class="weui-tabbar__item weui-bar__item_on">
+			<div class="weui-tabbar__icon">
+				<!----><img data-v-31e443c4="" src="static/image/home.svg" >
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">首页</span>
+			</p>
+			</a>
+			<a data-v-31e443c4="" href="marketindex.html" class="weui-tabbar__item ">
+			<div class="weui-tabbar__icon">
+				<img data-v-31e443c4="" src="static/image/market.svg" class="grey">
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">广场</span>
+			</p>
+			</a>
+			<a data-v-31e443c4="" href="userindex.html" class="weui-tabbar__item" >
+			<div class="weui-tabbar__icon">
+				<img data-v-31e443c4="" src="static/image/mine.svg" class="grey">
+			</div>
+			<p class="weui-tabbar__label">
+				<span data-v-31e443c4="">我的</span>
+			</p>
+			</a>
+		</div>
+	</div>
+</div>
+<script>
+
+var bearType = 'all';
+var bearOrderField = 'generation';
+var bearOrder = 'desc';
+var bearPage = 1;
+var bearListNoData = false;
+var bearListLoading = false;
+
+function getBearsData(){
+	bearListLoading = true;
+	if(bearPage == 1){
+		$('.monkeys .infinite-loading-container').show();
+		$('.monkeys .panel').hide();
+		$('.monkeys .panel .empty').remove();
+		$('.monkeys .panel .list-item').remove();
+	}
+
+	$.post("/home/get_bears_data.html", { "bearType":bearType, "bearOrderField":bearOrderField, "bearOrder":bearOrder, "bearPage":bearPage },
+		function(data){
+			if(bearPage == 1){
+				$('.monkeys .infinite-loading-container').hide();
+				$('.monkeys .panel').show();
+				bearListNoData = false;
+			}
+			if(data.trim() == '') bearListNoData = true;
+			$('.monkeys .panel .weui-loadmore').before(data);
+			$('.monkeys .panel .weui-loadmore').hide();
+
+			$('#bearlist').pullToRefreshDone();
+			$('#bearlist .weui-pull-to-refresh__layer').hide();
+			bearListLoading = false;
+	}, "json");
+}
+
+var recordType = 'trade';
+var recordPage = 1;
+var recordListNoData = false;
+var recordListLoading = false;
+
+function getRecordsData(){
+	recordListLoading = true;
+	if(recordPage == 1){
+		$('.records .infinite-loading-container').show();
+		$('.records .panel').hide();
+		$('.records .panel .empty').remove();
+		$('.records .panel .record-item').remove();
+	}
+
+	$.post("/home/get_records_data.html", { "recordType":recordType, "recordPage":recordPage },
+		function(data){
+			if(recordPage == 1){
+				$('.records .infinite-loading-container').hide();
+				$('.records .panel').show();
+				recordListNoData = false;
+			}
+			if(data.trim() == '') recordListNoData = true;
+			$('.records .panel .weui-loadmore').before(data);
+			$('.records .panel .weui-loadmore').hide();
+
+			$('#recordlist').pullToRefreshDone();
+			$('#recordlist .weui-pull-to-refresh__layer').hide();
+			recordListLoading = false;
+	}, "json");
+}
+
+getBearsData();
+/*
+$('.panel').pullToRefresh({
+	distance: 50,
+	onRefresh: function() {
+		if(curPanelId == 'bearlist'){
+			bearPage = 1;
+			getBearsData();
+		}
+		else if(curPanelId == 'recordlist'){
+			recordPage = 1;
+			getRecordsData();
+		}
+		//setTimeout(function() {
+			//$('#'+curPanelId).pullToRefreshDone();
+			//$('#'+curPanelId+' .weui-pull-to-refresh__layer').hide();
+		//}, 2000);
+	},
+	onPull: function (percent) {
+		if (percent > 100) percent = 100
+		$('#'+curPanelId+' .weui-pull-to-refresh__layer').show();
+	}
+});
+*/
+$('.page').infinite().on("infinite", function() {
+	//var self = this;
+    //if(self.loading) return;
+    //self.loading = true;
+
+	if(curPanelId == 'bearlist'){
+		if(bearListLoading) return;
+		if(bearListNoData) return;
+		$('#bearlist .weui-loadmore').show();
+		bearPage++;
+		getBearsData();
+	}
+	else if(curPanelId == 'recordlist'){
+		if(recordListLoading) return;
+		if(recordListNoData) return;
+		$('#recordlist .weui-loadmore').show();
+		recordPage++;
+		getRecordsData();
+	}
+
+	//setTimeout(function() {
+		//self.loading = false;
+	//}, 2000);
+});
+
+var curPanelId = 'bearlist';
+$('.status li').click(function(){ 
+	$('.status li').removeClass('active');
+	$(this).addClass('active');
+
+	var curNav = $(this).text();
+	if(curNav == '全部' || curNav == '集市' || curNav == '洞穴'){
+		curPanelId = 'bearlist';
+		if(curNav == '全部'){
+			bearType = 'all';
+		}
+		else if(curNav == '集市'){
+			bearType = 'sell';
+		}
+		else if(curNav == '洞穴'){
+			bearType = 'sellchild';
+		}
+
+		$('.order').show();
+		$('.monkeys').show();
+		$('.records').hide();
+		
+		bearPage = 1;
+		getBearsData();
+	}
+	else if(curNav == '历史'){
+		curPanelId = 'recordlist';
+		$('.order').hide();
+		$('.monkeys').hide();
+		$('.records').show();
+		
+		recordPage = 1;
+		getRecordsData();
+	}
+});
+
+$('.order li').click(function(){
+	$('.order li').removeClass('active');
+	$(this).addClass('active');
+	
+	var curOrder = $(this).text();
+	if(curOrder == '代数'){
+		bearOrderField = 'generation';
+	}
+	else if(curOrder == '体重'){
+		bearOrderField = 'weight';
+	}
+	else if(curOrder == '收益'){
+		bearOrderField = 'income';
+	}
+
+	if($(this).hasClass("up")){
+		$(this).removeClass('up');
+		bearOrder = 'desc';
+	}
+	else{
+		$(this).addClass('up');
+		bearOrder = 'asc';
+	}
+	
+	bearPage = 1;
+	getBearsData();
+});
+
+$('.records .tab div').click(function(){
+	$('.records .tab div').removeClass('active');
+	$(this).addClass('active');
+
+	var curTab = $(this).text();
+	if(curTab == '交易记录'){
+		recordType = 'trade';
+	}
+	else if(curTab == '生育记录'){
+		recordType = 'delivery';
+	}
+	
+	recordPage = 1;
+	getRecordsData();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+<meta charset=utf-8"utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>链克熊</title>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+
+
+<script src="{% static 'js/jquery-weui.min.js' %}"></script>
+<link href="{% static 'css/app.2b1339aa8b4bf34ca660f39fbcc8078b.css' %}" rel="stylesheet">
+<link href="{% static 'css/jquery-weui.min.css' %}" rel="stylesheet">
+</head>
+<body>
+
+
+{##}
+{##}
+{#<div id="app">#}
+{#	<div data-v-5a6e21d0="" class="page" img-set="/static/favicon.png" style="background: #000D16 url({% static 'image/bg2.jpg' %}) no-repeat;">#}
+{#        <div data-v-5a6e21d0="" class="logo">#}
+{#				<img data-v-5a6e21d0="" src="{% static 'image/logo.png' %}"  style="border-radius:0;">#}
+{#				<p data-v-5a6e21d0="">链克熊</p>#}
+{#        </div>#}
+    <form id="jsSetNewPwdForm" action="{% url "user:user_jihuo" %}" method="post" id="reg_form">
+        <div class="box">
+            <span class="word2">账&nbsp;号</span>
+            <input type="text" name="mobile" id="jsResetPwd" placeholder="{{ user.mobile }}" value="{{ user.mobile }}">
+        </div>
+        <div class="box">
+            <span class="word2">钱&nbsp;包</span>
+            <input type="text" name="qianbao" id="jsResetPwd2" placeholder="请输入钱包地址"/>
+        </div>
+        <div class="box">
+            <span class="word2">金&nbsp;额</span>
+            <input type="text" name="jine" id="jsResetCode" placeholder="{{ jine }}" value="{{ jine }}">
+        </div>
+
+
+        <li class="reg_sub">
+						<input type="submit" value="注 册">
+        </li>
+
+        {% csrf_token %}
+    </form>
+
+
+
+{#    </div>#}
+{#</div>#}
+{#</div>#}
+{##}
+{##}
+{##}
+{#						<div class="weui-cell__bd weui-cell__primary">#}
+{#							<input id="vux-x-input-uo99r" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="tel" pattern="[0-9]*" placeholder="{{ user.mobile }}" class="weui-input" value="{{ user.mobile }}">#}
+{#						</div>#}
+{##}
+{##}
+{##}
+{#						<div class="weui-cell__ft">#}
+{#							<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i>#}
+{#						</div>#}
+{##}
+{#                    </div>#}
+{#					<div data-v-5a6e21d0="" class="vux-x-input weui-cell" id="passwordCell" style="display: none;">#}
+{#						<div class="weui-cell__hd">#}
+{#						</div>#}
+{##}
+{##}
+{##}
+{#					<div data-v-5a6e21d0="" class="vux-x-input weui-cell" id="newpwdCell" style="display: none;">#}
+{#						<div class="weui-cell__hd">#}
+{#						</div>#}
+{##}
+{##}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+{#			<div data-v-5a6e21d0="" style="margin: 20px 0px;">#}
+{##}
+{##}
+{##}
+{#			</div>#}
+{#                <div data-v-5a6e21d0="" style="margin: 20px 0px;">#}
+{##}
+{#<button  id="loginBtn" style="display: none;">登录</button>#}
+{#				<button data-v-5a6e21d0="" class="weui-btn weui-btn_default" id="loginBtn" style="display: none;">登录</button>#}
+{#			</div>#}
+{#			<div data-v-5a6e21d0="" class="more" style="display: none;">#}
+{#				<div data-v-5a6e21d0="" id="qianbaodizhi">请像下面地址发送0.5482568wkb<br/>#}
+{#                官方注册地址：0x23c2ae9082670d8b01ef53707d7fbe5b1730a9df</div>#}
+{#			</div>#}
+{#		</div>#}
+{#	</div>#}
+{#</div>#}
+{#    </div>#}
+
+
+{#<style type="text/css">#}
+{#    #qianbaodizhi{font-size:18px;}#}
+{#</style>#}
+{##}
+{#<script type="text/javascript" >#}
+{##}
+{#   window.onload = function() {#}
+{##}
+{##}
+{#       $('#mobileCell').show();#}
+{#       $('#passwordCell').show();#}
+{#       $('#vcodeCell').hide();#}
+{#       $('#newpwdCell').hide();#}
+{#       $('#nextBtn').hide();#}
+{#       $('#termsLink').hide();#}
+{#       $('#loginBtn').text('已发送');#}
+{#       $('#loginBtn').show();#}
+{#       $('.more').show();#}
+{##}
+{#   }#}
+{#    $.ajaxSetup({#}
+{#        data:{csrfmiddlewaretoken:'{{ csrf_token }}'},#}
+{#    });#}
+{##}
+{#$('#loginBtn').click(function(){#}
+{#		$.post("{% url "user:do_login" %}", { "mobile": $('#vux-x-input-uo99r').val(), "password": $('#vux-x-input-32pqz').val(),"vcode": $('#vux-x-input-sd6d1').val(),"newpassword": $('#vux-x-input-suvrw').val(), "actionflag": actionFlag},#}
+{#			function(data){#}
+{#				if(data.code == 0){#}
+{#					$.toast(data.msg,"text");#}
+{#				}#}
+{##}
+{#				else{#}
+{#					if(data.code == 1){#}
+{#                    location.href = '/user/jihuo';#}
+{#                    }#}
+{#                    else{#}
+{#				    location.href = '/user';#}
+{#				    }#}
+{#				}#}
+{#		}, "json");#}
+{#	});#}
+{##}
+{##}
+{##}
+{##}
+{#</script >#}
+
+</body>
+</html>

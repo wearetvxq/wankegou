@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+<meta charset=utf-8"utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>链克熊</title>
+<link href="{% static 'css/app.2b1339aa8b4bf34ca660f39fbcc8078b.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+<div id="app">
+	<!---->
+	<div data-v-7ba0b930="" class="page" img-set="/static/favicon.png">
+		<div data-v-7ba0b930="" class="head">
+			<h1 data-v-7ba0b930="">帮助</h1>
+		</div>
+		<div data-v-7ba0b930="" class="panel">
+			<ul data-v-7ba0b930="" class="list">
+				<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">客服帮助</h2>
+				<p data-v-7ba0b930="">
+					官方客服邮箱：66231014@qq.com<br>
+					首次绑定时候，系统会让您对指定账户转入指定的玩客币数量，比如0.2243，不要转错！！
+				</p>
+				</li>
+                	<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">错误信息</h2>
+				<p data-v-7ba0b930="">
+				{{ msg }}
+				</p>
+				</li>
+				<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">奖池</h2>
+				<p data-v-7ba0b930="">
+					{{ jiangchi }}
+				</p>
+				</li>
+				<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">喂食</h2>
+				<p data-v-7ba0b930="">
+					{{ weishi }}
+				</p>
+				</li>
+				<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">喂养</h2>
+				<p data-v-7ba0b930="">
+
+
+                             {{ jinriquanzhi  }}
+					每只熊宝每天可以被喂养总量为5的玩客币，当尾号=x，则触发双倍喂养，当尾号！=x且属于1-7，则单倍喂养，若0、8、9则喂养减半，增加0.5倍体重。 喂养有概率触发属性值的提升，当hash的尾号x与你的三个属性值的某个属性值a.bc中的b相同时，此属性会增加x/10的属性点，如尾号为5，你的生育属性值为1.58，喂养金额为2.1wkc，则生育属性增加量为2.1/10=0.21，新的生育值就是1.79。若多个属性值的十分位一致且都命中，则多个属性值都会增加。
+				</p>
+				</li>
+				<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">购买</h2>
+				<p data-v-7ba0b930="">
+					通过系统中的广场-集市即可购买其他玩家出售的熊宝，每一只熊宝根据外观、属性、代数的不同会有不同的价格，通过余额转账，等待系统确认后这只熊宝就属于你啦！
+				</p>
+				</li>
+				<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">繁殖</h2>
+				<p data-v-7ba0b930="">
+					每只熊宝根据生育属性及代数等天赋点的不同都有自己的生育冷却时间，每次的生育冷却时间都不一样，当冷却倒数为0（准备就绪）的时候即表示小熊可以进行下一代的繁衍了。 你可以在广场-洞穴中选择适合自己的小熊宝进行搭配繁育，这是需要花费玩客币的，但是你可以获得一只新的小熊宝，点击立即生育，过程与集市交易类似，通过余额转账，当转账完成后，系统确认打款成功即可触发生育动作，你将得到一只新的小熊宝。
+				</p>
+				</li>
+				<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">繁殖规则</h2>
+				<p data-v-7ba0b930="">
+					0+0=1，0+1=2，1+1=2 以此类推
+谁付钱小熊算谁的
+				</p>
+				</li>
+				<li data-v-7ba0b930="">
+				<h2 data-v-7ba0b930="">禁止使用任何外挂</h2>
+				<p data-v-7ba0b930="">
+					请动手来玩，用按键精灵这些会被xxoo的。
+				</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

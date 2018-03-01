@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- saved from url=(0040)http://lkx.meihu99.com/market/index.html -->
+<html class="pixel-ratio-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>链克熊</title>
+<script src="/static/js/jquery.min.js"></script>
+    <link href="/static/css/jquery-weui.min.css" rel="stylesheet">
+<script src="/static/js/jquery-weui.min.js"></script>
+<script src="/static/js/layer.js"></script>
+    <link rel="stylesheet" href="/static/css/layer.css" id="layuicss-layer">
+<link href="/static/css/app.2b1339aa8b4bf34ca660f39fbcc8078b.css" rel="stylesheet">
+<link href="/static/css/jquery-weui.min.css" rel="stylesheet">
+
+    <link href="{% static 'css/layui.css' %}" rel="stylesheet">
+    <script src="{% static 'js/layui.js' %}"></script>
+    <style>
+        #list {
+float: left;
+            width: 33.3%;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="app">
+	<div data-v-31e443c4="" class="container" >
+
+        <div data-v-f1666576="" data-v-31e443c4="" class="page">
+			<div data-v-f1666576="" class="head">
+				<h1 data-v-f1666576="">广场</h1>
+				<div data-v-f1666576="" class="tool">
+					<div data-v-f1666576="" class="search">
+						<!---->
+						<div class="weui-cells vux-no-group-title" style="margin-top: 0px;">
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<input id="vux-x-input-3dmo5" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="搜索ID" class="weui-input">
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+							<div data-v-f1666576="" class="search-icon">
+								<i data-v-f1666576="" class="weui-icon weui_icon_search weui-icon-search"></i>
+							</div>
+						</div>
+					</div>
+					<div data-v-f1666576="" class="option">
+					</div>
+				</div>
+			</div>
+			<div data-v-f1666576="" class="vux-sticky-box vux-sticky">
+				<div data-v-f1666576="" class="filter">
+					<ul data-v-f1666576="" class="status">
+						<li data-v-f1666576="" class="active">集市</li>
+						<li data-v-f1666576="" class="">洞穴</li>
+						<li data-v-f1666576="" class="">拍卖</li>
+					</ul>
+					<ul data-v-f1666576="" class="order">
+						<li data-v-f1666576="" class="active up">价格</li>
+						<li data-v-f1666576="" class="up">代数</li>
+						<li data-v-f1666576="" class="up">体重</li>
+						<li data-v-f1666576="" class="up">生育</li>
+					</ul>
+				</div>
+			</div>
+			<div data-v-f1666576="" class="panel" id="bearlist">
+				<div data-v-fb2c869e="" data-v-7bb213c7="" class="infinite-loading-container" style="text-align: center; display: none;">
+	<div data-v-fb2c869e="">
+
+
+
+    </div>
+</div>
+
+                <div class="weui-pull-to-refresh__layer" style="display:none;">
+					<div class="weui-pull-to-refresh__arrow"></div>
+					<div class="weui-pull-to-refresh__preloader"></div>
+					<div class="down">下拉刷新</div>
+					<div class="up">释放刷新</div>
+					<div class="refresh">正在刷新</div>
+				</div>
+
+    {% verbatim %}
+<script id="list" type="text/html">
+    {{#for( var i=0; i<d.length; i++){ }}
+    <li class="mui-table-view-cell mui-media" >
+        <a href="/doginfo?id={{d[i].id}}">
+            <div class="mui-media-head">
+                <img class="mui-media-object" src="{{d[i].image}}" style="background-color: rgb(253,237,237)">
+                <span class="id"># {{d[i].id}}</span>
+                    <span class="info">
+                        <p align="left">{{d[i].daishu}}代</p>
+                        <p>{{d[i].chengzhangzhi}}/{{d[i].shengyuzhi}}/{{d[i].juejinzhi}}·{{d[i].tizhong}} kg</p>
+                    </span>
+            </div>
+            <div class="mui-media-body">
+                {{# if(d[i].status=='chushou'){ }}
+                    <span style="color: red">卖</span>
+                {{# }else{ }}
+                    <span style="color:#00BB00 ">育</span>
+                {{# } }}
+                {{d[i].jiage}}
+            </div>
+        </a>
+    </li>
+    {{# } }}
+</script>
+
+
+
+{% endverbatim %}
+
+
+<div id="alllist">
+
+        <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+     <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+
+     <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+                    <div  id="list" data-v-f1666576="" class="item" onclick="bearurl(9875);"><div data-v-f1666576="" class="img"><img data-v-f1666576="" src="http://p2du8wu7r.bkt.clouddn.com/59.svg" style="background: rgb(255, 232, 252);"><div data-v-f1666576="" class="id"># 9875</div><div data-v-f1666576="" class="gen">17代</div><div data-v-f1666576="" class="info"><p data-v-f1666576="">0次</p><p data-v-f1666576="">1.6/1.7/1.9•0kg</p></div></div><div data-v-f1666576="" class="price"><i data-v-f1666576="" class="ico sell"></i><span data-v-f1666576="">1 wkc</span></div></div>
+
+
+
+</div>
+
+
+
+
+
+
+			<div class="weui-loadmore" style="display:none;text-align:center;">
+					<i class="weui-loading"></i>
+					<span class="weui-loadmore__tips">正在加载</span>
+            </div>
+
+
+
+			</div>
+        </div>
+
+
+
+
+
+
+	</div>
+
+</div>
+
+<div id="half" class="weui-popup__container popup-bottom" style="z-index:9999;">
+	<div class="weui-popup__overlay">
+	</div>
+	<div class="weui-popup__modal">
+		<div class="toolbar">
+			<div class="toolbar-inner">
+				<a href="javascript:;" class="picker-button close-popup">关闭</a>
+				<h1 class="title">筛选</h1>
+			</div>
+		</div>
+		<div class="modal-content" style="background-color:#fbf9fe;">
+			<div data-v-f1666576="" class="wrap" style="margin:10px 20px;">
+				<div data-v-f1666576="" class="block">
+					<div data-v-f1666576="" class="input-range">
+						<div class="weui-cells__title">
+							代数
+						</div>
+						<div class="weui-cells">
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-ovr98" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最低" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+							<div data-v-f1666576="" class="dash">
+							</div>
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-nlb4m" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最高" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-v-f1666576="" class="input-range">
+						<div class="weui-cells__title">
+							体重
+						</div>
+						<div class="weui-cells">
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-ir4w4" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最低" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+							<div data-v-f1666576="" class="dash">
+							</div>
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-7vfsf" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最高" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-v-f1666576="" class="input-range">
+						<div class="weui-cells__title">
+							生育次数
+						</div>
+						<div class="weui-cells">
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-qoofe" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最低" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+							<div data-v-f1666576="" class="dash">
+							</div>
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-3n2wx" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最高" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-v-f1666576="" class="input-range">
+						<div class="weui-cells__title">
+							成长值
+						</div>
+						<div class="weui-cells">
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-dd66a" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最低" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+							<div data-v-f1666576="" class="dash">
+							</div>
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-ech7u" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最高" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-v-f1666576="" class="input-range">
+						<div class="weui-cells__title">
+							生育值
+						</div>
+						<div class="weui-cells">
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-emwv3" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最低" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+							<div data-v-f1666576="" class="dash">
+							</div>
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-5uvbo" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最高" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-v-f1666576="" class="input-range">
+						<div class="weui-cells__title">
+							掘金值
+						</div>
+						<div class="weui-cells">
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-hp31l" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最低" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+							<div data-v-f1666576="" class="dash">
+							</div>
+							<div data-v-f1666576="" class="vux-x-input weui-cell">
+								<div class="weui-cell__hd">
+									<!----><!----><!---->
+								</div>
+								<div class="weui-cell__bd weui-cell__primary">
+									<!----><input id="vux-x-input-alnc6" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" type="number" placeholder="最高" class="weui-input"><!----><!----><!---->
+								</div>
+								<div class="weui-cell__ft">
+									<i class="weui-icon weui_icon_clear weui-icon-clear" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" title="" style="display: none;"></i><!----><i class="weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_success weui-icon-success" style="display: none;"></i><i class="vux-input-icon weui-icon weui_icon_warn weui-icon-warn" style="display: none;"></i>
+								</div>
+								<div class="vux-toast">
+									<div class="weui-mask_transparent" style="display: none;">
+									</div>
+									<div class="weui-toast weui-toast_text" style="width: auto; display: none;">
+										<i class="weui-icon-success-no-circle weui-icon_toast" style="display: none;"></i>
+										<p class="weui-toast__content" style="padding: 10px;">
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-v-f1666576="" class="button" style="text-align:center;">
+				<button data-v-f1666576="" class="weui-btn btn weui-btn_warn" style="display:inline-block;width:40%;margin:5px;" id="clearBtn"><!----> 重置</button><button data-v-f1666576="" class="weui-btn btn weui-btn_primary" style="display:inline-block;width:40%;margin:5px;" id="searchBtn"><!----> 确定</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+var bearID = '';
+var gen_min,gen_max,weight_min,weight_max,dt_min,dt_max,growup_min,growup_max,breed_min,breed_max,dig_min,dig_max;
+var bearType = 'sell';
+var bearOrderField = 'sell_price';
+var bearOrder = 'asc';
+var bearPage = 1;
+var bearListNoData = false;
+var bearListLoading = false;
+
+    var laytpl;
+    layui.use('laytpl', function () {
+        laytpl = layui.laytpl;
+        getlist(1);
+    });
+var beariframe;
+window.onpopstate = function(event) {
+
+  layer.close(beariframe);
+};
+function bearurl(bear_id){
+	if(!!(window.history && history.pushState)){
+		history.pushState(null, '', '/bear/'+bear_id+'.html');
+
+		beariframe = layer.open({
+		  type: 2,
+		  title: '小熊详情',
+		  shadeClose: true,
+		  shade: 0.8,
+		  area: ['100%', '100%'],
+		  content: '/bear/'+bear_id+'.html', //iframe的url
+		  cancel: function(index, layero){
+                    layer.close(beariframe);
+                    history.back(-1);
+                    return false;
+                  }
+		});
+	}
+	else{
+		window.location.href = '/bear/'+bear_id+'.html';
+	}
+}
+
+function getBearsData(){
+	bearListLoading = true;
+	if(bearPage == 1){
+		$('#bearlist .infinite-loading-container').show();
+		$('#bearlist .empty').remove();
+		$('#bearlist .item').remove();
+	}
+
+	$.post("{% url 'homepage' %}", { "bearID":bearID, "bearType":bearType, "bearOrderField":bearOrderField, "bearOrder":bearOrder, "bearPage":bearPage, "gen_min":gen_min, "gen_max":gen_max, "weight_min":weight_min, "weight_max":weight_max, "dt_min":dt_min, "dt_max":dt_max, "growup_min":growup_min, "growup_max":growup_max, "breed_min":breed_min, "breed_max":breed_max, "dig_min":dig_min, "dig_max":dig_max },
+		function(data){
+			if(bearPage == 1){
+				$('#bearlist .infinite-loading-container').hide();
+				bearListNoData = false;
+			}
+			if(data.msg2 == '') bearListNoData = true;
+			$('#bearlist .weui-loadmore').before(data.msg2);
+			$('#bearlist .weui-loadmore').hide();
+
+			$('#bearlist').pullToRefreshDone();
+			$('#bearlist .weui-pull-to-refresh__layer').hide();
+			bearListLoading = false;
+
+            var tpl = document.getElementById('list').innerHTML, view = document.getElementById('alllist');
+            setTpl(data.msg, tpl, view);
+	}, "json");
+}
+
+    function setTpl(data, tpl, view) {
+        laytpl(tpl).render(data, function (html) {
+            view.innerHTML = html;
+        })
+    }
+
+$('.page').infinite().on("infinite", function() {
+
+	if(bearListLoading) return;
+	if(bearListNoData) return;
+	$('#bearlist .weui-loadmore').show();
+	bearPage++;
+	getBearsData();
+
+
+});
+
+$('.weui-icon-search').click(function(){
+	if($('#vux-x-input-3dmo5').val() == ''){
+		$.alert("请输入小熊ID");
+	}
+	else{
+		bearID = $('#vux-x-input-3dmo5').val();
+		gen_min = '';
+		gen_max = '';
+		weight_min = '';
+		weight_max = '';
+		dt_min = '';
+		dt_max = '';
+		growup_min = '';
+		growup_max = '';
+		breed_min = '';
+		breed_max = '';
+		dig_min = '';
+		dig_max = '';
+
+		getBearsData();
+	}
+});
+
+$('#vux-x-input-3dmo5').on('input',function(e){
+	var value = $(this).val();
+	if(value == ''){
+		bearID = '';
+		getBearsData();
+	}
+});
+
+$('#clearBtn').click(function(){
+	$('#vux-x-input-ovr98').val('');
+	$('#vux-x-input-nlb4m').val('');
+	$('#vux-x-input-ir4w4').val('');
+	$('#vux-x-input-7vfsf').val('');
+	$('#vux-x-input-qoofe').val('');
+	$('#vux-x-input-3n2wx').val('');
+	$('#vux-x-input-dd66a').val('');
+	$('#vux-x-input-ech7u').val('');
+	$('#vux-x-input-emwv3').val('');
+	$('#vux-x-input-5uvbo').val('');
+	$('#vux-x-input-hp31l').val('');
+	$('#vux-x-input-alnc6').val('');
+});
+
+$('#searchBtn').click(function(){
+	bearID = '';
+	$('#vux-x-input-3dmo5').val('');
+	gen_min = $('#vux-x-input-ovr98').val();
+	gen_max = $('#vux-x-input-nlb4m').val();
+	weight_min = $('#vux-x-input-ir4w4').val();
+	weight_max = $('#vux-x-input-7vfsf').val();
+	dt_min = $('#vux-x-input-qoofe').val();
+	dt_max = $('#vux-x-input-3n2wx').val();
+	growup_min = $('#vux-x-input-dd66a').val();
+	growup_max = $('#vux-x-input-ech7u').val();
+	breed_min = $('#vux-x-input-emwv3').val();
+	breed_max = $('#vux-x-input-5uvbo').val();
+	dig_min = $('#vux-x-input-hp31l').val();
+	dig_max = $('#vux-x-input-alnc6').val();
+
+	$.closePopup();
+	getBearsData();
+});
+
+$('.status li').click(function(){
+	$('.status li').removeClass('active');
+	$(this).addClass('active');
+
+	var curNav = $(this).text();
+	if(curNav == '集市' || curNav == '洞穴' || curNav == '拍卖'){
+		if(curNav == '集市'){
+			bearType = 'sell';
+			if(bearOrderField.indexOf('price') > -1){
+				bearOrderField = 'sell_price';
+			}
+		}
+		else if(curNav == '洞穴'){
+			bearType = 'sellchild';
+			if(bearOrderField.indexOf('price') > -1){
+				bearOrderField = 'sell_child_price';
+			}
+		}
+		else if(curNav == '拍卖'){
+			bearType = 'auction';
+		}
+
+		bearPage = 1;
+		getBearsData();
+	}
+});
+
+$('.order li').click(function(){
+	$('.order li').removeClass('active');
+	$(this).addClass('active');
+
+	var curOrder = $(this).text();
+	if(curOrder == '价格'){
+		if(bearType == 'sell'){
+			bearOrderField = 'sell_price';
+		}
+		else if(bearType == 'sellchild'){
+			bearOrderField = 'sell_child_price';
+		}
+	}
+	else if(curOrder == '代数'){
+		bearOrderField = 'generation';
+	}
+	else if(curOrder == '体重'){
+		bearOrderField = 'weight';
+	}
+	else if(curOrder == '生育'){
+		bearOrderField = 'breed';
+	}
+
+	if($(this).hasClass("up")){
+		$(this).removeClass('up');
+		bearOrder = 'desc';
+	}
+	else{
+		$(this).addClass('up');
+		bearOrder = 'asc';
+	}
+
+	bearPage = 1;
+	getBearsData();
+});
+
+
+$('.option').click(function(){
+
+	$("#half").popup();
+});
+
+
+</script>
+
+</body></html>
