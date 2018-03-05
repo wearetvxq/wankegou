@@ -79,6 +79,8 @@ urlpatterns = [
     url(r'^api/get4daidog',Get4DaiDogView.as_view(), name="get4daidog"),
     url(r'^api/get5daidog',Get5DaiDogView.as_view(), name="get5daidog"),
 
+    url(r'^article$', TemplateView.as_view(template_name="article.html"), name="article"),
+
 
 
 

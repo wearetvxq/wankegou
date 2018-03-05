@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body %}
+
+    <section class="container main-load">
+        <article class="post_article" itemscope itemtype="https://schema.org/Article">
+             <table>
+<tr><td></td><td></td><td>代数</td><td>代数衰减系数</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>代系数</td><td>0.15</td><td>0</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>1</td><td>1.15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>2</td><td>1.3225</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>3</td><td>1.520875</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>4</td><td>1.74900625</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>5</td><td>2.011357188</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>6</td><td>2.313060766</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>7</td><td>2.66001988</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>8</td><td>3.059022863</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>9</td><td>3.517876292</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>10</td><td>4.045557736</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>代数衰减系数=（1+代系数）^代数</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>生育属性值^(1/代系数）</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td>3</td><td>4</td><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.827112</td><td>2.599489</td><td>3.338339</td><td>4.053218</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.68897</td><td>2.294945</td><td>2.85262</td><td>3.376928</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.577365</td><td>2.059278</td><td>2.488079</td><td>2.881271</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.486329</td><td>1.874112</td><td>2.209173</td><td>2.509796</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.411449</td><td>1.726687</td><td>1.992188</td><td>2.225931</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.349409</td><td>1.607951</td><td>1.820904</td><td>2.005322</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.297682</td><td>1.511359</td><td>1.683979</td><td>1.831339</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.254317</td><td>1.432095</td><td>1.573311</td><td>1.692367</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.217788</td><td>1.366557</td><td>1.483006</td><td>1.580123</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1.186889</td><td>1.31201</td><td>1.408705</td><td>1.488589</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td>初始时间*（1+代系数）^已生育次数</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>生育时间</td><td></td><td>       生育次数              代数</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>初始时间</td><td>0.5</td><td>0</td><td>0.5</td><td>1</td><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td><td>64</td><td>128</td><td>256</td><td>512</td></tr>
+<tr><td></td><td></td><td>1</td><td>0.5</td><td>1.075</td><td>2.31125</td><td>4.969188</td><td>10.68375</td><td>22.97007</td><td>49.38565</td><td>106.1791</td><td>228.2852</td><td>490.8131</td><td>1055.248</td></tr>
+<tr><td></td><td></td><td>2</td><td>0.5</td><td>1.16125</td><td>2.697003</td><td>6.26379</td><td>14.54765</td><td>33.78692</td><td>78.47012</td><td>182.2469</td><td>423.2683</td><td>983.0407</td><td>2283.112</td></tr>
+<tr><td></td><td></td><td>3</td><td>0.5</td><td>1.260438</td><td>3.177405</td><td>8.009842</td><td>20.19181</td><td>50.90103</td><td>128.3151</td><td>323.4664</td><td>815.4184</td><td>2055.568</td><td>5181.829</td></tr>
+<tr><td></td><td></td><td>4</td><td>0.5</td><td>1.374503</td><td>3.778518</td><td>10.38717</td><td>28.55439</td><td>78.4962</td><td>215.7865</td><td>593.1986</td><td>1630.707</td><td>4482.823</td><td>12323.31</td></tr>
+<tr><td></td><td></td><td>5</td><td>0.5</td><td>1.505679</td><td>4.534136</td><td>13.6539</td><td>41.11678</td><td>123.8173</td><td>372.8581</td><td>1122.809</td><td>3381.179</td><td>10181.94</td><td>30661.45</td></tr>
+<tr><td></td><td></td><td>6</td><td>0.5</td><td>1.65653</td><td>5.488186</td><td>18.18269</td><td>60.24037</td><td>199.58</td><td>661.2207</td><td>2190.664</td><td>7257.804</td><td>24045.54</td><td>79664.35</td></tr>
+<tr><td></td><td></td><td>7</td><td>0.5</td><td>1.83001</td><td>6.697873</td><td>24.51435</td><td>89.723</td><td>328.388</td><td>1201.906</td><td>4399.002</td><td>16100.43</td><td>58927.91</td><td>215677.3</td></tr>
+<tr><td></td><td></td><td>8</td><td>0.5</td><td>2.029511</td><td>8.237833</td><td>33.43755</td><td>135.7238</td><td>550.906</td><td>2236.14</td><td>9076.543</td><td>36841.9</td><td>149542.1</td><td>606994.8</td></tr>
+<tr><td></td><td></td><td>9</td><td>0.5</td><td>2.258938</td><td>10.2056</td><td>46.10765</td><td>208.3087</td><td>941.1128</td><td>4251.831</td><td>19209.25</td><td>86785</td><td>392083.9</td><td>1771387</td></tr>
+<tr><td></td><td></td><td>10</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td></tr>
+<tr><td></td><td></td><td>生育时间=初始时间*（1+代系数）^已生育次数/生育属性值^(1/代系数）</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td></tr>
+</table>
+ <p>           生育的代数设置是：0+0=1,0+1=2,1+1=2,4+5=9,5+5=10 这样
+</p>
+
+            <p>&nbsp;</p>
+            <p><a style="font-family: Consolas, Monaco, monospace;"
+                  href="javascript:if(confirm('https://pan.lanzou.com/i0i7hsf  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://pan.lanzou.com/i0i7hsf'">点击下载</a>
+            </p>
+            <div style="clear:both; margin-top:5px; margin-bottom:5px;"></div>
+            <div style="float:left">
+                <!-- JiaThis Button BEGIN -->
+
+                <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                <!-- JiaThis Button END -->
+
+                <!-- JiaThis Button BEGIN -->
+                <div class="jiathis_style">
+                    <span class="jiathis_txt">分享到：</span>
+                    <a class="jiathis_button_tools_1"></a>
+                    <a class="jiathis_button_tools_2"></a>
+                    <a class="jiathis_button_tools_3"></a>
+                    <a class="jiathis_button_tools_4"></a>
+                    <a href="javascript:if(confirm('http://www.jiathis.com'))window.location='http://www.jiathis.com/share'"
+                       class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+                    <a class="jiathis_counter_style"></a>
+                </div>
+
+                <!-- JiaThis Button END --></div>
+            <div style="clear:both; margin-top:5px; margin-bottom:5px;"></div>
+            <div class="open-message" style="border:#00a67c 1px solid;border-radius:5px 5px 5px 5px;"><i
+                    class="fa fa-bullhorn"></i>sc珉博客，版权所有丨如未注明，均为原创丨
+                <br>本网站采用<a
+                        href="javascript:if(confirm('请共同准守BY-NC-SA协议'))window.location='https://creativecommons.org/licenses/by-nc-sa/3.0/cn/'"
+                        rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权.
+                <br>转载请注明转自：<a href="27.html" title="GameGuardian修改器最新中文版">https://cblog.me/archives/27.html</a></div>
+        </article>
+
+        <nav class="nearbypost">
+            <div class="alignleft"><a
+                    href="javascript:if(confirm('https://cblog.me/archives/23.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='https://cblog.me/archives/23.html'"
+                    rel="prev">上一篇</a></div>
+            <div class="alignright"><a
+                    href="javascript:if(confirm('https://cblog.me/archives/52.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='https://cblog.me/archives/52.html'"
+                    rel="next">下一篇</a></div>
+        </nav>
+    </section>    <!-- Comments -->
+    <section class="comments">
+        <div class="container" data-no-instant>
+
+            <!-- You can start editing here. -->
+
+            <h3 id="comments">
+                2条回应：&#8220;GameGuardian修改器最新中文版&#8221; </h3>
+
+            <div class="navigation">
+                <div class="alignleft"></div>
+                <div class="alignright"></div>
+            </div>
+
+            <ol class="commentlist">
+                <li class="comment even thread-even depth-1 parent" id="comment-4">
+                    <div id="div-comment-4" class="comment-body">
+                        <div class="comment-author vcard">
+                            <img alt=''
+                                 src="../../cn.gravatar.com/avatar/70939578872877d5593a6dfeb92aca1e-s=100&r=g.jpg"
+                                 srcset='https://cn.gravatar.com/avatar/70939578872877d5593a6dfeb92aca1e?s=64&#038;r=g 2x'
+                                 class='avatar avatar-32 photo' height='32' width='32'/> <a
+                                href=#
+                                rel='external nofollow' class='url'>表弟</a> <img src="{% static 'images/cn.png' %}"
+                                                                                title="China" alt="China"
+                                                                                class="country-flag"/> <img
+                                src="{% static 'images/chrome.png' %}" title='Google Chrome 57.0.2987.108'
+                                alt='Google Chrome' width='14px' height='14px' class='browser-icon'/> <img
+                                src="{% static 'images/windows.png' %}"
+                                title='Windows Server 2003' alt='Windows' width='14px' height='14px' class='os-icon'/>
+                            <a class="vip1" title="VIP 1"></a><cite class="fn"></cite><span class="says">说道：</span>
+                        </div>
+
+                        <div class="comment-meta commentmetadata"><a href="27.html#comment-4">
+                            2018年2月14日 上午12:37</a></div>
+
+                        <p>路过……</p>
+
+                        <div class="reply"><a rel='nofollow' class='comment-reply-link'
+
+                                              onclick='return addComment.moveForm( "div-comment-4", "4", "respond", "27" )'
+                                              aria-label='回复给表弟'>回复</a></div>
+                        <div id="respond" class="comment-respond">
+                            <h3 id="reply-title" class="comment-reply-title">发表评论
+                                <small><a rel="nofollow" id="cancel-comment-reply-link" href="27.html#respond"
+                                >取消回复</a></small>
+                            </h3>
+                            <form action="https://cblog.me/wp-comments-post.php" method="post" id="commentform"
+                                  class="comment-form">
+                                <p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span
+                                        class="required">*</span>标注</p>
+                                <p class="comment-form-author"><label for="author">姓名 <span
+                                        class="required">*</span></label> <input
+                                        id="author" name="author" type="text" value="" size="30" maxlength="245"
+                                        aria-required='true' required='required'/></p>
+                                <p class="comment-form-email"><label for="email">电子邮件 <span
+                                        class="required">*</span></label> <input
+                                        id="email" name="email" type="text" value="" size="30" maxlength="100"
+                                        aria-describedby="email-notes" aria-required='true' required='required'/></p>
+                                <p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url"
+                                                                                               type="text"
+                                                                                               value="" size="30"
+                                                                                               maxlength="200"/>
+                                </p>
+                                <p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment"
+                                                                                                          name="comment"
+                                                                                                          cols="45"
+                                                                                                          rows="8"
+                                                                                                          maxlength="65525"
+                                                                                                          aria-required="true"
+                                                                                                          required="required"></textarea>
+                                </p>
+                                <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
+                                                              value="发表评论"/>
+                                    <input type='hidden' name='comment_post_ID' value='27' id='comment_post_ID'/>
+                                    <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+                                </p></form>
+                        </div><!-- #respond -->
+
+                    </div>
+                    <ul class="children">
+                        <li class="comment odd alt depth-2" id="comment-17">
+                            <div id="div-comment-17" class="comment-body">
+                                <div class="comment-author vcard">
+                                    <img alt=''
+                                         src="../../cn.gravatar.com/avatar/69dc7057d907052319abb9530e2f961c-s=100&r=g.jpg"
+                                         srcset='https://cn.gravatar.com/avatar/69dc7057d907052319abb9530e2f961c?s=64&#038;r=g 2x'
+                                         class='avatar avatar-32 photo' height='32' width='32'/> <a
+                                        href="javascript:if(confirm('http://qq.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://qq.com/'"
+                                        rel='external nofollow' class='url'>32</a> <img
+                                        src="../wp-content/plugins/show-useragent/flags/us-1.png" title="United States"
+                                        alt="United States" class="country-flag"/> <img
+                                        src="../wp-content/plugins/show-useragent/browsers/chrome-1.png"
+                                        title='Google Chrome 55.0.2883.87' alt='Google Chrome' width='14px'
+                                        height='14px' class='browser-icon'/> <img
+                                        src="../wp-content/plugins/show-useragent/browsers/windows_win7-1.png"
+                                        title='Windows 7' alt='Windows' width='14px' height='14px' class='os-icon'/> <a
+                                        class="vip1" title="VIP 1"></a><cite class="fn"></cite><span
+                                        class="says">说道：</span></div>
+
+                                <div class="comment-meta commentmetadata"><a href="27.html#comment-17">
+                                    2018年3月4日 下午5:25</a></div>
+
+                                <p>@<a href="#comment-4">表弟</a> 红牛和？？？</p>
+
+                                <div class="reply"><a rel='nofollow' class='comment-reply-link'
+                                                      href="javascript:if(confirm('https://cblog.me/archives/27.html?replytocom=17  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='https://cblog.me/archives/27.html?replytocom=17#respond'"
+                                                      onclick='return addComment.moveForm( "div-comment-17", "17", "respond", "27" )'
+                                                      aria-label='回复给32'>回复</a></div>
+                            </div>
+                        </li><!-- #comment-## -->
+
+                    </ul><!-- .children -->
+                </li><!-- #comment-## -->
+            </ol>
+
+            <div class="navigation">
+                <div class="alignleft"></div>
+                <div class="alignright"></div>
+            </div>
+
+            <div id="respond" class="comment-respond">
+                <h3 id="reply-title" class="comment-reply-title">发表评论
+                    <small><a rel="nofollow" id="cancel-comment-reply-link" href="27.html#respond"
+                              style="display:none;">取消回复</a></small>
+                </h3>
+                <form action="https://cblog.me/wp-comments-post.php" method="post" id="commentform"
+                      class="comment-form">
+                    <p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span
+                            class="required">*</span>标注</p>
+                    <p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input
+                            id="author" name="author" type="text" value="" size="30" maxlength="245"
+                            aria-required='true' required='required'/></p>
+                    <p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input
+                            id="email" name="email" type="text" value="" size="30" maxlength="100"
+                            aria-describedby="email-notes" aria-required='true' required='required'/></p>
+                    <p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="text"
+                                                                                   value="" size="30" maxlength="200"/>
+                    </p>
+                    <p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment"
+                                                                                              name="comment" cols="45"
+                                                                                              rows="8" maxlength="65525"
+                                                                                              aria-required="true"
+                                                                                              required="required"></textarea>
+                    </p>
+                    <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="发表评论"/>
+                        <input type='hidden' name='comment_post_ID' value='27' id='comment_post_ID'/>
+                        <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+                    </p></form>
+            </div><!-- #respond -->
+        </div>
+    </section><!--音乐播放器-->
+
+{% endblock body %}
