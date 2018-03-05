@@ -15,8 +15,8 @@ class BaseSetting(object):
     use_bootswatch=True
 
 class GlobalSettings(object):
-    site_title="青蛙dog后台管理"
-    site_footer="青蛙dog"
+    site_title="玩客狗后台管理"
+    site_footer="玩客狗"
     menu_style="accordion"
 
 
