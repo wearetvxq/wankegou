@@ -16,6 +16,9 @@ import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +30,7 @@ SECRET_KEY = 'ra!3*gwpzds5hh6%*uh89tx!%pwt-^ohs&$!)n6*#$4_k8!7ge'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

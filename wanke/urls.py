@@ -2,8 +2,8 @@
 from django.conf.urls import url
 
 from users.views import CheckMovileView,DoLoginView,SendSmsView,CheckLoginView,ModifyNicknameView,ShanChuQianBaoView
-from users.views import RechargeView,DoBindView,SubmitBindQueryView,CheckCertifyView,YaoQingView,Get0DaiDogView
-from users.views import Get1DaiDogView,Get2DaiDogView,Get3DaiDogView,Get4DaiDogView,Get5DaiDogView
+from users.views import RechargeView,DoBindView,SubmitBindQueryView,CheckCertifyView,YaoQingView,GetDogView
+
 from users.views import LogoutView,SubmitWithdrawView,HouTaiView,RecordsView,WithdrawRecordsView,ChouGiangView
 from market.views import HomePageView,HomeView,DogInfoView,UnSellView,BuyView,GetMydogView,GetNowdogView,WeiShiView,FenFaGueGinView
 
@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^bind$', TemplateView.as_view(template_name="bind.html"), name="bind"),
     url(r'^marketindex$', TemplateView.as_view(template_name="marketindex.html"), name="marketindex"),
     # url(r'^choujiang$', TemplateView.as_view(template_name="choujiang.html"), name="choujiang"),
-    url(r'^ceshi$', TemplateView.as_view(template_name="ceshi.html"), name="ceshi"),
+
 
     # url(r'^cat/(?P<id>\d+)$', TemplateView.as_view(template_name="cat.html"), name="cat"),
     # url(r'^buy$', TemplateView.as_view(template_name="buy.html"), name="buy"),
@@ -72,12 +72,8 @@ urlpatterns = [
     # url(r'^jihuo/jh(?P<id>\d+)', JHView.as_view(), name="user_jh"),
     url(r'^api/fenfajuejin', FenFaGueGinView.as_view(), name="fenfajuejin"),
     url(r'^choujiang', ChouGiangView.as_view(), name="choujiang"),
-    url(r'^api/get0daidog',Get0DaiDogView.as_view(), name="get0daidog"),
-    url(r'^api/get1daidog',Get1DaiDogView.as_view(), name="get1daidog"),
-    url(r'^api/get2daidog',Get2DaiDogView.as_view(), name="get2daidog"),
-    url(r'^api/get3daidog',Get3DaiDogView.as_view(), name="get3daidog"),
-    url(r'^api/get4daidog',Get4DaiDogView.as_view(), name="get4daidog"),
-    url(r'^api/get5daidog',Get5DaiDogView.as_view(), name="get5daidog"),
+    url(r'^api/getdog',GetDogView.as_view(), name="get0daidog"),
+
 
     url(r'^article$', TemplateView.as_view(template_name="article.html"), name="article"),
 
